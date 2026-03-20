@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cartilha do Laboratório - LCA</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
 body{font-family:Poppins;background:#eef2ff;margin:0}
 header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:30px;text-align:center}
@@ -17,98 +16,77 @@ main{max-width:1100px;margin:auto;padding:20px}
 .hidden{display:none}
 a{color:#2563eb}
 </style>
-
 <script>
-function toggle(id){
- let el=document.getElementById(id);
- el.classList.toggle('hidden');
-}
+function toggle(id){document.getElementById(id).classList.toggle('hidden');}
 </script>
-
 </head>
 <body>
-
 <header>
 <img src="logo.jpg">
 <h1>Cartilha do Laboratório</h1>
 <p>Escola de Educação Básica Professor Laércio Caldeira de Andrada</p>
 </header>
-
-<nav>
-<a href="#">Disciplinas</a>
-</nav>
-
+<nav><a>Disciplinas</a></nav>
 <main>
 
-<section class="card">
-<h2>🏫 O que o laboratório oferece?</h2>
-<p>💻 <b>Computadores e Notebooks</b><br>Acesso à internet, editores de texto, planilhas, apresentações e plataformas educacionais.</p>
-
-<p>📱 <b>Tablets</b><br>Ideais para leitura interativa, aplicativos educativos e criação de conteúdo multimídia.</p>
-
-<p>📺 <b>Projetor / TV Interativa</b><br>Perfeito para vídeos, demonstrações e atividades coletivas com suporte visual.</p>
-</section>
-
-<section class="card">
-<h2>🧭 Como usar esta cartilha?</h2>
-<p>1️⃣ <b>Escolha sua disciplina</b><br>Clique na disciplina no menu.</p>
-<p>2️⃣ <b>Explore os recursos</b><br>Veja plataformas e atividades sugeridas.</p>
-<p>3️⃣ <b>Agende o laboratório</b><br>Converse com o professor responsável para planejar.</p>
-</section>
-
-<div class="card" onclick="toggle('mat')">
-<h2>📊 Matemática (clique)</h2>
-</div>
+<div class="card" onclick="toggle('mat')"><h2>📊 Matemática</h2></div>
 <div id="mat" class="hidden card">
-<p><b>Khan Academy:</b> <a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
-<p><b>GeoGebra:</b> <a href="https://www.geogebra.org" target="_blank">Acessar</a></p>
-<p><b>PhET:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-<p><b>Matific:</b> <a href="https://www.matific.com" target="_blank">Acessar</a></p>
+<p><i>Visualize funções, treine operações e torne o abstrato concreto.</i></p>
+<p><b>Khan Academy</b><br>Videoaulas e exercícios.<br>Anos Iniciais | Finais | Médio<br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
+<p><b>GeoGebra</b><br>Gráficos e funções interativas.<br>Finais | Médio<br><a href="https://geogebra.org" target="_blank">Acessar</a></p>
+<p><b>PhET</b><br>Simulações matemáticas.<br>Iniciais | Finais<br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
+<p><b>Matific</b><br>Jogos gamificados.<br>Iniciais | Finais<br><a href="https://matific.com" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('ciencias')">
-<h2>🔬 Ciências (clique)</h2>
-</div>
+<div class="card" onclick="toggle('ciencias')"><h2>🔬 Ciências</h2></div>
 <div id="ciencias" class="hidden card">
-<p><b>PhET:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-<p><b>BD Ciências:</b> <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
-<p><b>Khan Academy:</b> <a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
+<p><b>PhET</b><br>Simulações científicas.<br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
+<p><b>BD Ciências</b><br>Conteúdos da Unicamp.<br><a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
+<p><b>Khan Academy</b><br>Conteúdos completos.<br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
+<p><b>EduCAPES</b><br>Objetos educacionais.<br><a href="https://educapes.capes.gov.br" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('port')">
-<h2>📖 Português (clique)</h2>
-</div>
+<div class="card" onclick="toggle('port')"><h2>📖 Português</h2></div>
 <div id="port" class="hidden card">
-<p><b>Norma Culta:</b> <a href="https://www.normaculta.com.br" target="_blank">Acessar</a></p>
-<p><b>Domínio Público:</b> <a href="http://www.dominiopublico.gov.br" target="_blank">Acessar</a></p>
-<p><b>Canva:</b> <a href="https://www.canva.com" target="_blank">Acessar</a></p>
-<p><b>Wordwall:</b> <a href="https://wordwall.net" target="_blank">Acessar</a></p>
+<p><b>Norma Culta</b><br>Gramática online.<br><a href="https://normaculta.com.br" target="_blank">Acessar</a></p>
+<p><b>Domínio Público</b><br>Biblioteca gratuita.<br><a href="http://dominiopublico.gov.br" target="_blank">Acessar</a></p>
+<p><b>Canva</b><br>Criação de textos visuais.<br><a href="https://canva.com" target="_blank">Acessar</a></p>
+<p><b>Wordwall</b><br>Jogos educativos.<br><a href="https://wordwall.net" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('hist')">
-<h2>🏛️ História (clique)</h2>
-</div>
+<div class="card" onclick="toggle('hist')"><h2>🏛️ História</h2></div>
 <div id="hist" class="hidden card">
-<p><b>Google Arts:</b> <a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
-<p><b>Museu da Pessoa:</b> <a href="https://www.museudapessoa.org" target="_blank">Acessar</a></p>
+<p><b>Google Arts</b><br>Museus virtuais.<br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
+<p><b>Museu da Pessoa</b><br>Histórias reais.<br><a href="https://museudapessoa.org" target="_blank">Acessar</a></p>
+<p><b>Brasiliana USP</b><br>Documentos históricos.<br><a href="https://brasiliana.usp.br" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('geo')">
-<h2>🌎 Geografia (clique)</h2>
-</div>
+<div class="card" onclick="toggle('geo')"><h2>🌎 Geografia</h2></div>
 <div id="geo" class="hidden card">
-<p><b>Google Earth:</b> <a href="https://earth.google.com" target="_blank">Acessar</a></p>
-<p><b>IBGE:</b> <a href="https://www.ibge.gov.br" target="_blank">Acessar</a></p>
+<p><b>Google Earth</b><br>Exploração do planeta.<br><a href="https://earth.google.com" target="_blank">Acessar</a></p>
+<p><b>IBGE</b><br>Dados e mapas.<br><a href="https://ibge.gov.br" target="_blank">Acessar</a></p>
+<p><b>Climatempo</b><br>Clima em tempo real.<br><a href="https://climatempo.com.br" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('ing')">
-<h2>🇬🇧 Inglês (clique)</h2>
-</div>
+<div class="card" onclick="toggle('ing')"><h2>🇬🇧 Inglês</h2></div>
 <div id="ing" class="hidden card">
-<p><b>Duolingo:</b> <a href="https://www.duolingo.com" target="_blank">Acessar</a></p>
+<p><b>Duolingo</b><br>Aprendizado gamificado.<br><a href="https://duolingo.com" target="_blank">Acessar</a></p>
+<p><b>British Council</b><br>Atividades completas.<br><a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar</a></p>
+</div>
+
+<div class="card" onclick="toggle('artes')"><h2>🎨 Artes</h2></div>
+<div id="artes" class="hidden card">
+<p><b>Google Arts</b><br>Obras e museus.<br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
+<p><b>Canva</b><br>Design gráfico.<br><a href="https://canva.com" target="_blank">Acessar</a></p>
+<p><b>Music Lab</b><br>Explorar sons.<br><a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar</a></p>
+</div>
+
+<div class="card" onclick="toggle('edfis')"><h2>🏃 Educação Física</h2></div>
+<div id="edfis" class="hidden card">
+<p><b>YouTube</b><br>Vídeos esportivos.<br><a href="https://youtube.com" target="_blank">Acessar</a></p>
+<p><b>COB</b><br>Conteúdos olímpicos.<br><a href="https://cob.org.br" target="_blank">Acessar</a></p>
 </div>
 
 </main>
-
 </body>
 </html>
