@@ -8,46 +8,65 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f4f6f8; color: #333; }
+    body { font-family: 'Poppins', sans-serif; background: #eef2ff; color: #333; }
 
     header {
-      background: linear-gradient(135deg, #1e40af, #2563eb);
-      color: white; padding: 30px; text-align: center;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white; padding: 40px; text-align: center;
+    }
+
+    header img {
+      width: 90px;
+      margin-bottom: 10px;
     }
 
     nav {
-      background: white; display: flex; justify-content: center; gap: 10px;
-      padding: 10px; flex-wrap: wrap; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 10px; background: white; padding: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     nav a {
-      text-decoration: none; color: #1e40af; font-weight: 500;
-      padding: 8px 12px; border-radius: 8px;
+      text-decoration: none; color: #1e3a8a;
+      font-weight: 500; padding: 8px 14px;
+      border-radius: 20px;
+      background: #e0e7ff;
+      transition: 0.3s;
     }
 
-    nav a:hover { background: #e0e7ff; }
+    nav a:hover { background: #2563eb; color: white; }
 
-    main { padding: 30px; max-width: 1200px; margin: auto; }
+    main { max-width: 1200px; margin: auto; padding: 30px; }
+
+    .section { margin-bottom: 30px; }
 
     .card {
-      background: white; padding: 20px; border-radius: 12px;
-      margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: white; padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
     }
 
-    .cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 15px;
+    .card:hover { transform: translateY(-5px); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    h2 { color: #1e40af; margin-bottom: 10px; }
-    h3 { margin-bottom: 8px; }
+    h2 { color: #1e3a8a; margin-bottom: 15px; }
+    h3 { margin-bottom: 10px; }
 
-    ul { padding-left: 18px; }
-
-    .disciplina {
-      border-left: 5px solid #2563eb;
-      padding-left: 10px;
+    a.link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
     }
+
+    a.link:hover { text-decoration: underline; }
 
     footer { text-align: center; padding: 20px; color: #666; }
   </style>
@@ -55,67 +74,86 @@
 <body>
 
 <header>
+  <!-- COLOQUE AQUI O LOGO -->
+  <img src="logo.png" alt="Logo da Escola">
   <h1>💻 Cartilha do Laboratório de Informática</h1>
-  <p>Escola LCA - Laércio Caldeira de Andrada</p>
+  <p>Escola de Educação Básica Professor Laércio Caldeira de Andrada</p>
 </header>
 
 <nav>
   <a href="#uso">Como Usar</a>
   <a href="#disciplinas">Disciplinas</a>
-  <a href="#jogos">Jogos</a>
+  <a href="#plataformas">Plataformas</a>
 </nav>
 
 <main>
 
-<section id="uso" class="card">
-  <h2>🧭 Como usar esta cartilha?</h2>
-  <div class="cards">
-    <div class="card"><h3>1️⃣ Planejar</h3><p>Defina o objetivo e escolha a atividade digital.</p></div>
-    <div class="card"><h3>2️⃣ Aplicar</h3><p>Leve os alunos ao laboratório e oriente o uso.</p></div>
-    <div class="card"><h3>3️⃣ Avaliar</h3><p>Observe participação e aprendizagem.</p></div>
+<section id="uso" class="section">
+  <h2>🧭 Como usar o laboratório</h2>
+  <div class="grid">
+    <div class="card"><h3>Planejar</h3><p>Defina objetivos e escolha ferramentas digitais.</p></div>
+    <div class="card"><h3>Aplicar</h3><p>Oriente os alunos durante a atividade.</p></div>
+    <div class="card"><h3>Avaliar</h3><p>Observe participação e aprendizagem.</p></div>
   </div>
 </section>
 
-<section id="disciplinas" class="card">
+<section id="disciplinas" class="section">
   <h2>📚 Atividades por disciplina</h2>
-  <div class="cards">
-
-    <div class="card disciplina"><h3>🔢 Matemática</h3><p>Jogos de cálculo, desafios de lógica e gráficos digitais.</p></div>
-    <div class="card disciplina"><h3>📖 Português</h3><p>Produção de textos, leitura digital e jogos de ortografia.</p></div>
-    <div class="card disciplina"><h3>🏛️ História</h3><p>Linhas do tempo digitais, vídeos históricos e pesquisas.</p></div>
-    <div class="card disciplina"><h3>🧠 Filosofia</h3><p>Debates online, vídeos reflexivos e produção de ideias.</p></div>
-    <div class="card disciplina"><h3>🌎 Geografia</h3><p>Mapas interativos, localização e estudos ambientais.</p></div>
-    <div class="card disciplina"><h3>🔬 Ciências</h3><p>Experimentos virtuais e vídeos educativos.</p></div>
-    <div class="card disciplina"><h3>🇬🇧 Inglês</h3><p>Jogos de vocabulário, escuta e leitura digital.</p></div>
-    <div class="card disciplina"><h3>🏃 Educação Física</h3><p>Vídeos de exercícios, jogos interativos e saúde.</p></div>
-    <div class="card disciplina"><h3>⚗️ Química</h3><p>Simulações de reações químicas e experimentos virtuais.</p></div>
-    <div class="card disciplina"><h3>⚡ Física</h3><p>Simulações de movimento, energia e forças.</p></div>
-    <div class="card disciplina"><h3>👥 Sociologia</h3><p>Debates sociais, vídeos e análise de temas atuais.</p></div>
-    <div class="card disciplina"><h3>🎨 Artes</h3><p>Desenho digital, criação de imagens e edição.</p></div>
-
+  <div class="grid">
+    <div class="card"><h3>Matemática</h3><p>Jogos de cálculo e lógica.</p></div>
+    <div class="card"><h3>Português</h3><p>Produção de textos e leitura digital.</p></div>
+    <div class="card"><h3>História</h3><p>Pesquisas e linhas do tempo.</p></div>
+    <div class="card"><h3>Geografia</h3><p>Mapas interativos e localização.</p></div>
+    <div class="card"><h3>Ciências</h3><p>Simulações e vídeos educativos.</p></div>
+    <div class="card"><h3>Inglês</h3><p>Vocabulário e jogos interativos.</p></div>
   </div>
 </section>
 
-<section id="jogos" class="card">
-  <h2>🎮 Sugestões de jogos e plataformas</h2>
-  <ul>
-    <li>PhET Interactive Simulations (Ciências, Física, Química)</li>
-    <li>Khan Academy (Matemática e diversas áreas)</li>
-    <li>Biblioteca Digital de Ciências</li>
-    <li>Norma Culta (Português)</li>
-    <li>Domínio Público (Leitura e História)</li>
-    <li>Canva (Criação de atividades e Artes)</li>
-    <li>Wordwall (Jogos interativos)</li>
-    <li>Google Arts & Culture (Artes e História)</li>
-    <li>Museu da Pessoa (História e Sociologia)</li>
-    <li>Google Earth (Geografia)</li>
-    <li>IBGE Mapas (Geografia)</li>
-    <li>Duolingo (Inglês)</li>
-  </ul>
+<section id="plataformas" class="section">
+  <h2>🎮 Plataformas e Jogos Educativos</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>PhET</h3>
+      <p>Simulações de Física e Química.</p>
+      <a class="link" href="https://phet.colorado.edu/" target="_blank">Acessar</a>
+    </div>
+
+    <div class="card">
+      <h3>Khan Academy</h3>
+      <p>Aulas e exercícios interativos.</p>
+      <a class="link" href="https://pt.khanacademy.org/" target="_blank">Acessar</a>
+    </div>
+
+    <div class="card">
+      <h3>Wordwall</h3>
+      <p>Criação de jogos educativos.</p>
+      <a class="link" href="https://wordwall.net/" target="_blank">Acessar</a>
+    </div>
+
+    <div class="card">
+      <h3>Canva</h3>
+      <p>Criação de atividades visuais.</p>
+      <a class="link" href="https://www.canva.com/" target="_blank">Acessar</a>
+    </div>
+
+    <div class="card">
+      <h3>Google Earth</h3>
+      <p>Exploração geográfica.</p>
+      <a class="link" href="https://earth.google.com/" target="_blank">Acessar</a>
+    </div>
+
+    <div class="card">
+      <h3>Duolingo</h3>
+      <p>Aprendizado de idiomas.</p>
+      <a class="link" href="https://www.duolingo.com/" target="_blank">Acessar</a>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Escola LCA</p>
+  <p>© 2026 Escola de Educação Básica Professor Laércio Caldeira de Andrada</p>
 </footer>
 
 </main>
