@@ -1,160 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartilha do Laboratório - LCA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartilha do Laboratório - LCA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #eef2ff; color: #333; }
+<style>
+body{font-family:Poppins;background:#eef2ff;margin:0}
+header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:30px;text-align:center}
+header img{width:80px}
+nav{display:flex;justify-content:center;gap:10px;background:#fff;padding:10px}
+nav a{padding:8px 12px;background:#e0e7ff;border-radius:20px;text-decoration:none;color:#1e3a8a}
+main{max-width:1100px;margin:auto;padding:20px}
+.card{background:#fff;padding:20px;border-radius:12px;margin-bottom:15px;cursor:pointer}
+.hidden{display:none}
+a{color:#2563eb}
+</style>
 
-    header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white; padding: 40px; text-align: center;
-    }
+<script>
+function toggle(id){
+ let el=document.getElementById(id);
+ el.classList.toggle('hidden');
+}
+</script>
 
-    header img {
-      width: 90px;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      display: flex; justify-content: center; flex-wrap: wrap;
-      gap: 10px; background: white; padding: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      text-decoration: none; color: #1e3a8a;
-      font-weight: 500; padding: 8px 14px;
-      border-radius: 20px;
-      background: #e0e7ff;
-      transition: 0.3s;
-    }
-
-    nav a:hover { background: #2563eb; color: white; }
-
-    main { max-width: 1200px; margin: auto; padding: 30px; }
-
-    .section { margin-bottom: 30px; }
-
-    .card {
-      background: white; padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover { transform: translateY(-5px); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    h2 { color: #1e3a8a; margin-bottom: 15px; }
-    h3 { margin-bottom: 10px; }
-
-    a.link {
-      display: inline-block;
-      margin-top: 8px;
-      color: #2563eb;
-      font-weight: 500;
-      text-decoration: none;
-    }
-
-    a.link:hover { text-decoration: underline; }
-
-    footer { text-align: center; padding: 20px; color: #666; }
-  </style>
 </head>
 <body>
 
 <header>
-  <!-- COLOQUE AQUI O LOGO -->
-  <img src="logo.jpg" alt="Logo da Escola">
-  <h1>💻 Cartilha do Laboratório de Informática</h1>
-  <p>Escola de Educação Básica Professor Laércio Caldeira de Andrada</p>
+<img src="logo.jpg">
+<h1>Cartilha do Laboratório</h1>
+<p>Escola de Educação Básica Professor Laércio Caldeira de Andrada</p>
 </header>
 
 <nav>
-  <a href="#uso">Como Usar</a>
-  <a href="#disciplinas">Disciplinas</a>
-  <a href="#plataformas">Plataformas</a>
+<a href="#">Disciplinas</a>
 </nav>
 
 <main>
 
-<section id="uso" class="section">
-  <h2>🧭 Como usar o laboratório</h2>
-  <div class="grid">
-    <div class="card"><h3>Planejar</h3><p>Defina objetivos e escolha ferramentas digitais.</p></div>
-    <div class="card"><h3>Aplicar</h3><p>Oriente os alunos durante a atividade.</p></div>
-    <div class="card"><h3>Avaliar</h3><p>Observe participação e aprendizagem.</p></div>
-  </div>
+<section class="card">
+<h2>🏫 O que o laboratório oferece?</h2>
+<p>💻 <b>Computadores e Notebooks</b><br>Acesso à internet, editores de texto, planilhas, apresentações e plataformas educacionais.</p>
+
+<p>📱 <b>Tablets</b><br>Ideais para leitura interativa, aplicativos educativos e criação de conteúdo multimídia.</p>
+
+<p>📺 <b>Projetor / TV Interativa</b><br>Perfeito para vídeos, demonstrações e atividades coletivas com suporte visual.</p>
 </section>
 
-<section id="disciplinas" class="section">
-  <h2>📚 Atividades por disciplina</h2>
-  <div class="grid">
-    <div class="card"><h3>Matemática</h3><p>Jogos de cálculo e lógica.</p></div>
-    <div class="card"><h3>Português</h3><p>Produção de textos e leitura digital.</p></div>
-    <div class="card"><h3>História</h3><p>Pesquisas e linhas do tempo.</p></div>
-    <div class="card"><h3>Geografia</h3><p>Mapas interativos e localização.</p></div>
-    <div class="card"><h3>Ciências</h3><p>Simulações e vídeos educativos.</p></div>
-    <div class="card"><h3>Inglês</h3><p>Vocabulário e jogos interativos.</p></div>
-  </div>
+<section class="card">
+<h2>🧭 Como usar esta cartilha?</h2>
+<p>1️⃣ <b>Escolha sua disciplina</b><br>Clique na disciplina no menu.</p>
+<p>2️⃣ <b>Explore os recursos</b><br>Veja plataformas e atividades sugeridas.</p>
+<p>3️⃣ <b>Agende o laboratório</b><br>Converse com o professor responsável para planejar.</p>
 </section>
 
-<section id="plataformas" class="section">
-  <h2>🎮 Plataformas e Jogos Educativos</h2>
-  <div class="grid">
+<div class="card" onclick="toggle('mat')">
+<h2>📊 Matemática (clique)</h2>
+</div>
+<div id="mat" class="hidden card">
+<p><b>Khan Academy:</b> <a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
+<p><b>GeoGebra:</b> <a href="https://www.geogebra.org" target="_blank">Acessar</a></p>
+<p><b>PhET:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
+<p><b>Matific:</b> <a href="https://www.matific.com" target="_blank">Acessar</a></p>
+</div>
 
-    <div class="card">
-      <h3>PhET</h3>
-      <p>Simulações de Física e Química.</p>
-      <a class="link" href="https://phet.colorado.edu/" target="_blank">Acessar</a>
-    </div>
+<div class="card" onclick="toggle('ciencias')">
+<h2>🔬 Ciências (clique)</h2>
+</div>
+<div id="ciencias" class="hidden card">
+<p><b>PhET:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
+<p><b>BD Ciências:</b> <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
+<p><b>Khan Academy:</b> <a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
+</div>
 
-    <div class="card">
-      <h3>Khan Academy</h3>
-      <p>Aulas e exercícios interativos.</p>
-      <a class="link" href="https://pt.khanacademy.org/" target="_blank">Acessar</a>
-    </div>
+<div class="card" onclick="toggle('port')">
+<h2>📖 Português (clique)</h2>
+</div>
+<div id="port" class="hidden card">
+<p><b>Norma Culta:</b> <a href="https://www.normaculta.com.br" target="_blank">Acessar</a></p>
+<p><b>Domínio Público:</b> <a href="http://www.dominiopublico.gov.br" target="_blank">Acessar</a></p>
+<p><b>Canva:</b> <a href="https://www.canva.com" target="_blank">Acessar</a></p>
+<p><b>Wordwall:</b> <a href="https://wordwall.net" target="_blank">Acessar</a></p>
+</div>
 
-    <div class="card">
-      <h3>Wordwall</h3>
-      <p>Criação de jogos educativos.</p>
-      <a class="link" href="https://wordwall.net/" target="_blank">Acessar</a>
-    </div>
+<div class="card" onclick="toggle('hist')">
+<h2>🏛️ História (clique)</h2>
+</div>
+<div id="hist" class="hidden card">
+<p><b>Google Arts:</b> <a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
+<p><b>Museu da Pessoa:</b> <a href="https://www.museudapessoa.org" target="_blank">Acessar</a></p>
+</div>
 
-    <div class="card">
-      <h3>Canva</h3>
-      <p>Criação de atividades visuais.</p>
-      <a class="link" href="https://www.canva.com/" target="_blank">Acessar</a>
-    </div>
+<div class="card" onclick="toggle('geo')">
+<h2>🌎 Geografia (clique)</h2>
+</div>
+<div id="geo" class="hidden card">
+<p><b>Google Earth:</b> <a href="https://earth.google.com" target="_blank">Acessar</a></p>
+<p><b>IBGE:</b> <a href="https://www.ibge.gov.br" target="_blank">Acessar</a></p>
+</div>
 
-    <div class="card">
-      <h3>Google Earth</h3>
-      <p>Exploração geográfica.</p>
-      <a class="link" href="https://earth.google.com/" target="_blank">Acessar</a>
-    </div>
-
-    <div class="card">
-      <h3>Duolingo</h3>
-      <p>Aprendizado de idiomas.</p>
-      <a class="link" href="https://www.duolingo.com/" target="_blank">Acessar</a>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Escola de Educação Básica Professor Laércio Caldeira de Andrada</p>
-</footer>
+<div class="card" onclick="toggle('ing')">
+<h2>🇬🇧 Inglês (clique)</h2>
+</div>
+<div id="ing" class="hidden card">
+<p><b>Duolingo:</b> <a href="https://www.duolingo.com" target="_blank">Acessar</a></p>
+</div>
 
 </main>
 
