@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartilha do Laboratório - LCA</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -13,79 +12,60 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      display: flex;
       background: #f4f6f8;
       color: #333;
     }
 
-    /* Sidebar */
-    nav {
-      width: 260px;
-      height: 100vh;
-      background: #1e3a8a;
-      color: white;
-      padding: 20px;
-      position: fixed;
-    }
-
-    nav h1 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    nav ul {
-      list-style: none;
-    }
-
-    nav ul li {
-      margin: 12px 0;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #93c5fd;
-    }
-
-    /* Main Content */
-    main {
-      margin-left: 260px;
-      padding: 30px;
-      width: 100%;
-    }
-
     header {
-      background: linear-gradient(135deg, #2563eb, #1e40af);
+      background: linear-gradient(135deg, #1e40af, #2563eb);
       color: white;
       padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    header h2 {
-      font-weight: 600;
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
 
-    section {
+    nav a {
+      text-decoration: none;
+      color: #1e40af;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    nav a:hover {
+      background: #e0e7ff;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
       background: white;
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: 0.3s;
     }
 
-    section:hover {
-      transform: translateY(-3px);
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
 
-    h3 {
+    h2 {
       color: #1e40af;
       margin-bottom: 10px;
     }
@@ -94,121 +74,90 @@
       padding-left: 20px;
     }
 
-    li {
-      margin: 6px 0;
-    }
-
     footer {
       text-align: center;
-      margin-top: 30px;
+      padding: 20px;
       color: #666;
-      font-size: 14px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav {
-        position: relative;
-        width: 100%;
-        height: auto;
-      }
-
-      main {
-        margin-left: 0;
-      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <h1>📘 Cartilha LCA</h1>
-    <ul>
-      <li><a href="#apresentacao">Apresentação</a></li>
-      <li><a href="#objetivos">Objetivos</a></li>
-      <li><a href="#importancia">Importância</a></li>
-      <li><a href="#regras">Regras</a></li>
-      <li><a href="#professor">Professor</a></li>
-      <li><a href="#atividades">Atividades</a></li>
-      <li><a href="#ferramentas">Ferramentas</a></li>
-      <li><a href="#avaliacao">Avaliação</a></li>
-    </ul>
-  </nav>
+<header>
+  <h1>💻 Cartilha do Laboratório de Informática</h1>
+  <p>Escola LCA - Laércio Caldeira de Andrada</p>
+</header>
 
-  <main>
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#uso">Como Usar</a>
+  <a href="#disciplinas">Disciplinas</a>
+  <a href="#atividades">Atividades</a>
+</nav>
 
-    <header>
-      <h2>💻 Cartilha do Laboratório de Informática</h2>
-      <p>Escola LCA - Laércio Caldeira de Andrada</p>
-    </header>
+<main>
 
-    <section id="apresentacao">
-      <h3>📘 Apresentação</h3>
-      <p>Esta cartilha orienta professores sobre o uso pedagógico do laboratório de informática, promovendo aulas mais dinâmicas, interativas e alinhadas à cultura digital.</p>
-    </section>
+<section id="inicio" class="card">
+  <h2>📘 O que é o laboratório?</h2>
+  <p>O laboratório de informática é um espaço de aprendizagem que permite o uso de tecnologias digitais para enriquecer o ensino, promover interação e desenvolver habilidades importantes nos alunos.</p>
+</section>
 
-    <section id="objetivos">
-      <h3>🎯 Objetivos</h3>
-      <ul>
-        <li>Incentivar o uso da tecnologia na educação</li>
-        <li>Apoiar o professor no uso do laboratório</li>
-        <li>Promover aulas mais interativas</li>
-        <li>Desenvolver habilidades digitais</li>
-      </ul>
-    </section>
+<section id="uso" class="card">
+  <h2>🧭 Como usar esta cartilha?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>1️⃣ Planeje</h3>
+      <p>Defina o objetivo da aula e escolha a atividade digital adequada.</p>
+    </div>
+    <div class="card">
+      <h3>2️⃣ Execute</h3>
+      <p>Leve os alunos ao laboratório e oriente o uso das ferramentas.</p>
+    </div>
+    <div class="card">
+      <h3>3️⃣ Avalie</h3>
+      <p>Observe participação e desenvolvimento das habilidades digitais.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="importancia">
-      <h3>💻 Importância</h3>
-      <p>O laboratório permite aprendizagem ativa, inovação pedagógica e inclusão digital.</p>
-    </section>
+<section id="disciplinas" class="card">
+  <h2>📚 Uso por disciplina</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🔢 Matemática</h3>
+      <p>Jogos de lógica, contas e raciocínio matemático.</p>
+    </div>
+    <div class="card">
+      <h3>📖 Português</h3>
+      <p>Produção de textos, leitura digital e jogos de alfabetização.</p>
+    </div>
+    <div class="card">
+      <h3>🌎 Geografia</h3>
+      <p>Mapas interativos e pesquisas sobre o mundo.</p>
+    </div>
+    <div class="card">
+      <h3>🔬 Ciências</h3>
+      <p>Vídeos educativos e simulações.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="regras">
-      <h3>📏 Regras de Uso</h3>
-      <ul>
-        <li>Não consumir alimentos</li>
-        <li>Utilizar os equipamentos com cuidado</li>
-        <li>Respeitar colegas</li>
-        <li>Não acessar conteúdos impróprios</li>
-      </ul>
-    </section>
+<section id="atividades" class="card">
+  <h2>🎮 Sugestões de jogos e atividades</h2>
+  <ul>
+    <li>Jogos de matemática online</li>
+    <li>Caça-palavras digital</li>
+    <li>Quiz no Kahoot</li>
+    <li>Produção de histórias no computador</li>
+    <li>Desenho no Paint</li>
+  </ul>
+</section>
 
-    <section id="professor">
-      <h3>👨‍🏫 Papel do Professor</h3>
-      <ul>
-        <li>Planejar a aula com antecedência</li>
-        <li>Testar os equipamentos</li>
-        <li>Orientar os alunos</li>
-      </ul>
-    </section>
+<footer>
+  <p>© 2026 Escola LCA</p>
+</footer>
 
-    <section id="atividades">
-      <h3>🎮 Sugestões de Atividades</h3>
-      <ul>
-        <li>Jogos educativos</li>
-        <li>Pesquisas orientadas</li>
-        <li>Kahoot e quizzes</li>
-      </ul>
-    </section>
-
-    <section id="ferramentas">
-      <h3>🛠 Ferramentas Digitais</h3>
-      <ul>
-        <li>Google</li>
-        <li>YouTube</li>
-        <li>PowerPoint</li>
-      </ul>
-    </section>
-
-    <section id="avaliacao">
-      <h3>📊 Avaliação</h3>
-      <p>A avaliação considera participação, uso correto das ferramentas e desenvolvimento digital.</p>
-    </section>
-
-    <footer>
-      <p>© 2026 Escola LCA - Todos os direitos reservados</p>
-    </footer>
-
-  </main>
+</main>
 
 </body>
 </html>
