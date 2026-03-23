@@ -1,1 +1,15 @@
-
+{
+  "name": "Cartilha do Laboratório",
+  "short_name": "Cartilha LCA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#eef2ff",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
