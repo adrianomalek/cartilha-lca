@@ -12,19 +12,30 @@ header img{width:80px}
 nav{display:flex;justify-content:center;gap:10px;background:#fff;padding:10px}
 nav a{padding:8px 12px;background:#e0e7ff;border-radius:20px;text-decoration:none;color:#1e3a8a}
 main{max-width:1100px;margin:auto;padding:20px}
-.card{background:#fff;padding:20px;border-radius:12px;margin-bottom:15px;cursor:pointer}
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
 .hidden{display:none}
 a{color:#2563eb}
 
-/* ===== CORES DAS DISCIPLINAS ===== */
-.matematica { background: #4CAF50; color: white; }
-.ciencias { background: #FF9800; color: white; }
-.portugues { background: #2196F3; color: white; }
-.historia { background: #9C27B0; color: white; }
-.geografia { background: #795548; color: white; }
-.ingles { background: #3F51B5; color: white; }
-.artes { background: #E91E63; color: white; }
-.edfis { background: #009688; color: white; }
+/* CORES */
+.matematica{background:#4CAF50;color:white;}
+.ciencias{background:#FF9800;color:white;}
+.portugues{background:#2196F3;color:white;}
+.historia{background:#9C27B0;color:white;}
+.geografia{background:#795548;color:white;}
+.ingles{background:#3F51B5;color:white;}
+.artes{background:#E91E63;color:white;}
+.edfis{background:#009688;color:white;}
 </style>
 
 <script>
@@ -48,97 +59,79 @@ function toggle(id){
 
 <section style="background:#1e3a8a;color:white;padding:20px;border-radius:12px;margin-bottom:20px;">
 <h2>💻 O que é a BNCC da Computação?</h2>
-<p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação, tornando o ensino de tecnologia parte oficial da educação básica brasileira. Isso significa que a computação não é mais uma disciplina isolada: ela atravessa todas as áreas do conhecimento.</p>
-
-<p>O documento organiza o ensino de computação em três grandes eixos:</p>
-
-<p>🧠 <b>Pensamento Computacional</b><br>
-🌐 <b>Mundo Digital</b><br>
-💡 <b>Cultura Digital</b></p>
-
-<p>Ao usar o laboratório, você contribui diretamente para essas competências.</p>
+<p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação.</p>
 </section>
 
 <!-- Matemática -->
 <div class="card matematica" onclick="toggle('mat')">
-  <h2>📊 Matemática</h2>
+<h2>📊 Matemática</h2>
 </div>
 <div id="mat" class="hidden card">
 <p><i>Visualize funções, treine operações e torne o abstrato concreto.</i></p>
-<p><b>Khan Academy</b><br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
-<p><b>GeoGebra</b><br><a href="https://geogebra.org" target="_blank">Acessar</a></p>
-<p><b>PhET</b><br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-<p><b>Matific</b><br><a href="https://matific.com" target="_blank">Acessar</a></p>
+<p><b>Khan Academy</b></p>
 </div>
 
 <!-- Ciências -->
 <div class="card ciencias" onclick="toggle('ciencias')">
-  <h2>🔬 Ciências</h2>
+<h2>🔬 Ciências</h2>
 </div>
 <div id="ciencias" class="hidden card">
-<p><b>PhET</b><br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-<p><b>BD Ciências</b><br><a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
-<p><b>Khan Academy</b><br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
-<p><b>EduCAPES</b><br><a href="https://educapes.capes.gov.br" target="_blank">Acessar</a></p>
+<p><i>Explore fenômenos naturais, faça simulações e desperte a curiosidade científica.</i></p>
+<p><b>PhET</b></p>
 </div>
 
 <!-- Português -->
 <div class="card portugues" onclick="toggle('port')">
-  <h2>📖 Português</h2>
+<h2>📖 Português</h2>
 </div>
 <div id="port" class="hidden card">
-<p><b>Norma Culta</b><br><a href="https://normaculta.com.br" target="_blank">Acessar</a></p>
-<p><b>Domínio Público</b><br><a href="http://dominiopublico.gov.br" target="_blank">Acessar</a></p>
-<p><b>Canva</b><br><a href="https://canva.com" target="_blank">Acessar</a></p>
-<p><b>Wordwall</b><br><a href="https://wordwall.net" target="_blank">Acessar</a></p>
+<p><i>Desenvolva leitura, escrita e interpretação de forma interativa e criativa.</i></p>
+<p><b>Norma Culta</b></p>
 </div>
 
 <!-- História -->
 <div class="card historia" onclick="toggle('hist')">
-  <h2>🏛️ História</h2>
+<h2>🏛️ História</h2>
 </div>
 <div id="hist" class="hidden card">
-<p><b>Google Arts</b><br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
-<p><b>Museu da Pessoa</b><br><a href="https://museudapessoa.org" target="_blank">Acessar</a></p>
-<p><b>Brasiliana USP</b><br><a href="https://brasiliana.usp.br" target="_blank">Acessar</a></p>
+<p><i>Viaje no tempo, conheça culturas e compreenda os acontecimentos históricos.</i></p>
+<p><b>Google Arts</b></p>
 </div>
 
 <!-- Geografia -->
 <div class="card geografia" onclick="toggle('geo')">
-  <h2>🌎 Geografia</h2>
+<h2>🌎 Geografia</h2>
 </div>
 <div id="geo" class="hidden card">
-<p><b>Google Earth</b><br><a href="https://earth.google.com" target="_blank">Acessar</a></p>
-<p><b>IBGE</b><br><a href="https://ibge.gov.br" target="_blank">Acessar</a></p>
-<p><b>Climatempo</b><br><a href="https://climatempo.com.br" target="_blank">Acessar</a></p>
+<p><i>Explore o mundo, analise mapas e entenda o espaço em que vivemos.</i></p>
+<p><b>Google Earth</b></p>
 </div>
 
 <!-- Inglês -->
 <div class="card ingles" onclick="toggle('ing')">
-  <h2>🇬🇧 Inglês</h2>
+<h2>🇬🇧 Inglês</h2>
 </div>
 <div id="ing" class="hidden card">
-<p><b>Duolingo</b><br><a href="https://duolingo.com" target="_blank">Acessar</a></p>
-<p><b>British Council</b><br><a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar</a></p>
+<p><i>Aprenda vocabulário e pratique o idioma de forma divertida e interativa.</i></p>
+<p><b>Duolingo</b></p>
 </div>
 
 <!-- Artes -->
 <div class="card artes" onclick="toggle('artes')">
-  <h2>🎨 Artes</h2>
+<h2>🎨 Artes</h2>
 </div>
 <div id="artes" class="hidden card">
-<p><b>Google Arts</b><br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
-<p><b>Canva</b><br><a href="https://canva.com" target="_blank">Acessar</a></p>
-<p><b>Music Lab</b><br><a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar</a></p>
+<p><i>Estimule a criatividade, explore cores, formas e diferentes expressões artísticas.</i></p>
+<p><b>Canva</b></p>
 </div>
 
 <!-- Educação Física -->
 <div class="card edfis" onclick="toggle('edfis')">
-  <h2>🏃 Educação Física</h2>
+<h2>🏃 Educação Física</h2>
 </div>
 <div id="edfis" class="hidden card">
-<p><b>YouTube</b><br><a href="https://youtube.com" target="_blank">Acessar</a></p>
-<p><b>COB</b><br><a href="https://cob.org.br" target="_blank">Acessar</a></p>
+<p><i>Conheça esportes, movimento corporal e hábitos saudáveis de forma dinâmica.</i></p>
+<p><b>YouTube</b></p>
 </div>
 
 </main>
