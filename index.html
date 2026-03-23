@@ -15,6 +15,16 @@ main{max-width:1100px;margin:auto;padding:20px}
 .card{background:#fff;padding:20px;border-radius:12px;margin-bottom:15px;cursor:pointer}
 .hidden{display:none}
 a{color:#2563eb}
+  /* ===== CORES DAS DISCIPLINAS ===== */
+
+.matematica { background: #4CAF50; color: white; }
+.ciencias { background: #FF9800; color: white; }
+.portugues { background: #2196F3; color: white; }
+.historia { background: #9C27B0; color: white; }
+.geografia { background: #795548; color: white; }
+.ingles { background: #3F51B5; color: white; }
+.artes { background: #E91E63; color: white; }
+.edfis { background: #009688; color: white; }
 </style>
 <script>
 function toggle(id){document.getElementById(id).classList.toggle('hidden');}
@@ -42,7 +52,7 @@ function toggle(id){document.getElementById(id).classList.toggle('hidden');}
 <p>Ao usar o laboratório de informática junto à sua disciplina, você está contribuindo diretamente para o desenvolvimento dessas competências nos alunos — de forma integrada e contextualizada.</p>
 </section>
 
-<div class="card" onclick="toggle('mat')"><h2>📊 Matemática</h2></div>
+<div class="card matematica" onclick="toggle('mat')"><h2>📊 Matemática</h2></div>
 <div id="mat" class="hidden card">
 <p><i>Visualize funções, treine operações e torne o abstrato concreto.</i></p>
 <p><b>Khan Academy</b><br>Videoaulas e exercícios.<br>Anos Iniciais | Finais | Médio<br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
@@ -51,7 +61,7 @@ function toggle(id){document.getElementById(id).classList.toggle('hidden');}
 <p><b>Matific</b><br>Jogos gamificados.<br>Iniciais | Finais<br><a href="https://matific.com" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('ciencias')"><h2>🔬 Ciências</h2></div>
+<div class="card ciencias" onclick="toggle('ciencias')">
 <div id="ciencias" class="hidden card">
 <p><b>PhET</b><br>Simulações científicas.<br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
 <p><b>BD Ciências</b><br>Conteúdos da Unicamp.<br><a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
@@ -59,7 +69,7 @@ function toggle(id){document.getElementById(id).classList.toggle('hidden');}
 <p><b>EduCAPES</b><br>Objetos educacionais.<br><a href="https://educapes.capes.gov.br" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('port')"><h2>📖 Português</h2></div>
+<div class="card portugues" onclick="toggle('port')">
 <div id="port" class="hidden card">
 <p><b>Norma Culta</b><br>Gramática online.<br><a href="https://normaculta.com.br" target="_blank">Acessar</a></p>
 <p><b>Domínio Público</b><br>Biblioteca gratuita.<br><a href="http://dominiopublico.gov.br" target="_blank">Acessar</a></p>
@@ -67,34 +77,34 @@ function toggle(id){document.getElementById(id).classList.toggle('hidden');}
 <p><b>Wordwall</b><br>Jogos educativos.<br><a href="https://wordwall.net" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('hist')"><h2>🏛️ História</h2></div>
+<div class="card historia" onclick="toggle('hist')">
 <div id="hist" class="hidden card">
 <p><b>Google Arts</b><br>Museus virtuais.<br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
 <p><b>Museu da Pessoa</b><br>Histórias reais.<br><a href="https://museudapessoa.org" target="_blank">Acessar</a></p>
 <p><b>Brasiliana USP</b><br>Documentos históricos.<br><a href="https://brasiliana.usp.br" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('geo')"><h2>🌎 Geografia</h2></div>
+<div class="card geografia" onclick="toggle('geo')">
 <div id="geo" class="hidden card">
 <p><b>Google Earth</b><br>Exploração do planeta.<br><a href="https://earth.google.com" target="_blank">Acessar</a></p>
 <p><b>IBGE</b><br>Dados e mapas.<br><a href="https://ibge.gov.br" target="_blank">Acessar</a></p>
 <p><b>Climatempo</b><br>Clima em tempo real.<br><a href="https://climatempo.com.br" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('ing')"><h2>🇬🇧 Inglês</h2></div>
+<div class="card ingles" onclick="toggle('ing')">
 <div id="ing" class="hidden card">
 <p><b>Duolingo</b><br>Aprendizado gamificado.<br><a href="https://duolingo.com" target="_blank">Acessar</a></p>
 <p><b>British Council</b><br>Atividades completas.<br><a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('artes')"><h2>🎨 Artes</h2></div>
+<div class="card artes" onclick="toggle('artes')">
 <div id="artes" class="hidden card">
 <p><b>Google Arts</b><br>Obras e museus.<br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
 <p><b>Canva</b><br>Design gráfico.<br><a href="https://canva.com" target="_blank">Acessar</a></p>
 <p><b>Music Lab</b><br>Explorar sons.<br><a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar</a></p>
 </div>
 
-<div class="card" onclick="toggle('edfis')"><h2>🏃 Educação Física</h2></div>
+<div class="card edfis" onclick="toggle('edfis')">
 <div id="edfis" class="hidden card">
 <p><b>YouTube</b><br>Vídeos esportivos.<br><a href="https://youtube.com" target="_blank">Acessar</a></p>
 <p><b>COB</b><br>Conteúdos olímpicos.<br><a href="https://cob.org.br" target="_blank">Acessar</a></p>
