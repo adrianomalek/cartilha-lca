@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cartilha do Laboratório - LCA</title>
@@ -14,31 +13,16 @@ body{font-family:Poppins;background:#eef2ff;margin:0}
 header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:30px;text-align:center}
 header img{width:80px}
 
-nav{display:flex;justify-content:center;gap:10px;background:#fff;padding:10px}
-
 main{max-width:1100px;margin:auto;padding:20px}
-  <section style="background:#1e3a8a;color:white;padding:20px;border-radius:12px;margin-bottom:20px;">
-<h2>💻 O que é a BNCC da Computação?</h2>
 
-<p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação, tornando o ensino de tecnologia parte oficial da educação básica brasileira. Isso significa que a computação não é mais uma disciplina isolada: ela atravessa todas as áreas do conhecimento.</p>
-
-<p>O documento organiza o ensino de computação em três grandes eixos, presentes em todas as etapas — da Educação Infantil ao Ensino Médio:</p>
-
-<p>🧠 <b>Pensamento Computacional</b><br>
-🌐 <b>Mundo Digital</b><br>
-💡 <b>Cultura Digital</b></p>
-
-<p>Ao usar o laboratório de informática junto à sua disciplina, você está contribuindo diretamente para o desenvolvimento dessas competências nos alunos — de forma integrada e contextualizada.</p>
-</section>
-
-/* CARD */
+/* CARD CORRIGIDO */
 .card{
   padding:20px;
   border-radius:12px;
   margin-bottom:15px;
   cursor:pointer;
+  transition:0.3s;
   color:white;
-  transition: all 0.3s ease;
 }
 
 .card:hover{
@@ -50,6 +34,7 @@ main{max-width:1100px;margin:auto;padding:20px}
   display:flex;
   align-items:center;
   gap:10px;
+  margin:0;
 }
 
 /* ANIMAÇÃO */
@@ -102,115 +87,101 @@ function toggle(id){
 
 <main>
 
-<!-- MATEMÁTICA -->
+<!-- BNCC -->
+<section style="background:#1e3a8a;color:white;padding:20px;border-radius:12px;margin-bottom:20px;">
+<h2>💻 O que é a BNCC da Computação?</h2>
+<p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação, tornando o ensino de tecnologia parte oficial da educação básica brasileira.</p>
+</section>
+
+<!-- Matemática -->
 <div class="card matematica" onclick="toggle('mat')">
 <h2>📊 Matemática</h2>
 </div>
 <div id="mat" class="hidden card matematica">
 <p class="descricao">Visualize funções, treine operações e torne o abstrato concreto.</p>
-
-<p><b>Khan Academy</b><br>
-<a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
-
-<p><b>GeoGebra</b><br>
-<a href="https://geogebra.org" target="_blank">Acessar</a></p>
-
-<p><b>PhET</b><br>
-<a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-
-<p><b>Matific</b><br>
-<a href="https://matific.com" target="_blank">Acessar</a></p>
+<p><b>Khan Academy</b><br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
+<p><b>GeoGebra</b><br><a href="https://geogebra.org" target="_blank">Acessar</a></p>
+<p><b>PhET</b><br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
+<p><b>Matific</b><br><a href="https://matific.com" target="_blank">Acessar</a></p>
 </div>
 
-<!-- CIÊNCIAS -->
+<!-- Ciências -->
 <div class="card ciencias" onclick="toggle('ciencias')">
 <h2>🔬 Ciências</h2>
 </div>
 <div id="ciencias" class="hidden card ciencias">
 <p class="descricao">Explore fenômenos naturais e desperte a curiosidade científica.</p>
-
 <p><b>PhET</b><br><a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
 <p><b>BD Ciências</b><br><a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
 <p><b>Khan Academy</b><br><a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
 <p><b>EduCAPES</b><br><a href="https://educapes.capes.gov.br" target="_blank">Acessar</a></p>
 </div>
 
-<!-- PORTUGUÊS -->
+<!-- Português -->
 <div class="card portugues" onclick="toggle('port')">
 <h2>📖 Português</h2>
 </div>
 <div id="port" class="hidden card portugues">
-<p class="descricao">Desenvolva leitura e escrita de forma criativa.</p>
-
+<p class="descricao">Desenvolva leitura, escrita e interpretação de forma interativa e criativa.</p>
 <p><b>Norma Culta</b><br><a href="https://normaculta.com.br" target="_blank">Acessar</a></p>
 <p><b>Domínio Público</b><br><a href="http://dominiopublico.gov.br" target="_blank">Acessar</a></p>
 <p><b>Canva</b><br><a href="https://canva.com" target="_blank">Acessar</a></p>
 <p><b>Wordwall</b><br><a href="https://wordwall.net" target="_blank">Acessar</a></p>
 </div>
 
-<!-- HISTÓRIA -->
+<!-- História -->
 <div class="card historia" onclick="toggle('hist')">
 <h2>🏛️ História</h2>
 </div>
 <div id="hist" class="hidden card historia">
 <p class="descricao">Conheça o passado e compreenda o presente.</p>
-
 <p><b>Google Arts</b><br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
 <p><b>Museu da Pessoa</b><br><a href="https://museudapessoa.org" target="_blank">Acessar</a></p>
 <p><b>Brasiliana USP</b><br><a href="https://brasiliana.usp.br" target="_blank">Acessar</a></p>
 </div>
 
-<!-- GEOGRAFIA -->
+<!-- Geografia -->
 <div class="card geografia" onclick="toggle('geo')">
 <h2>🌎 Geografia</h2>
 </div>
 <div id="geo" class="hidden card geografia">
 <p class="descricao">Explore o planeta e compreenda os espaços.</p>
-
 <p><b>Google Earth</b><br><a href="https://earth.google.com" target="_blank">Acessar</a></p>
 <p><b>IBGE</b><br><a href="https://ibge.gov.br" target="_blank">Acessar</a></p>
 <p><b>Climatempo</b><br><a href="https://climatempo.com.br" target="_blank">Acessar</a></p>
 </div>
 
-<!-- INGLÊS -->
+<!-- Inglês -->
 <div class="card ingles" onclick="toggle('ing')">
 <h2>🇬🇧 Inglês</h2>
 </div>
 <div id="ing" class="hidden card ingles">
 <p class="descricao">Aprenda inglês de forma interativa.</p>
-
 <p><b>Duolingo</b><br><a href="https://duolingo.com" target="_blank">Acessar</a></p>
 <p><b>British Council</b><br><a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar</a></p>
 </div>
 
-<!-- ARTES -->
+<!-- Artes -->
 <div class="card artes" onclick="toggle('artes')">
 <h2>🎨 Artes</h2>
 </div>
 <div id="artes" class="hidden card artes">
 <p class="descricao">Explore a criatividade e expressão artística.</p>
-
 <p><b>Google Arts</b><br><a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
 <p><b>Canva</b><br><a href="https://canva.com" target="_blank">Acessar</a></p>
 <p><b>Music Lab</b><br><a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar</a></p>
 </div>
 
-<!-- EDUCAÇÃO FÍSICA -->
+<!-- Educação Física -->
 <div class="card edfis" onclick="toggle('edfis')">
 <h2>🏃 Educação Física</h2>
 </div>
 <div id="edfis" class="hidden card edfis">
 <p class="descricao">Movimente o corpo e desenvolva hábitos saudáveis.</p>
-
 <p><b>YouTube</b><br><a href="https://youtube.com" target="_blank">Acessar</a></p>
 <p><b>COB</b><br><a href="https://cob.org.br" target="_blank">Acessar</a></p>
 </div>
 
 </main>
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
-</script>
 </body>
 </html>
