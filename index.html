@@ -7,53 +7,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-/* PALETA DE CORES BASEADA NA LOGO */
-:root {
-  --bg-bege: #f6ebd9;
-  --card-bg: #fffbf3;
-  --texto-escuro: #2d2a26;
-  --detalhe-amarelo: #f7ca45;
-  --detalhe-azul: #4a90e2;
-  --detalhe-verde: #7ed321;
-  --detalhe-vermelho: #e74c3c;
-  --sombra: rgba(74, 58, 38, 0.08);
-}
-
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-bege);
-  color: var(--texto-escuro);
+  background-color: #f6ebd9;
+  color: #2d2a26;
   margin: 0;
   padding: 0;
 }
 
-/* HEADER COM INTEGRAÇÃO SUAVE DA LOGO */
+/* BANNER DE CABEÇALHO INTEGRADO */
 header {
-  background-color: var(--bg-bege);
-  padding: 40px 20px 20px;
+  width: 100%;
+  background-color: #f6ebd9;
   text-align: center;
+  padding-top: 10px;
 }
 
-#logo-lca {
-  max-width: 100%;
-  width: 480px;
+.banner-topo {
+  width: 100%;
+  max-width: 1000px;
   height: auto;
-  border-radius: 20px;
-  mix-blend-mode: multiply; /* Faz o fundo bege da imagem mesclar com o site */
-  margin-bottom: 15px;
-}
-
-h1.titulo-pagina {
-  font-family: 'Fredoka', cursive;
-  font-size: 2.2rem;
-  color: #3b2d23;
-  margin: 10px 0 5px;
-}
-
-p.subtitulo-pagina {
-  font-size: 1.05rem;
-  color: #6e5c4f;
-  margin: 0;
+  display: block;
+  margin: 0 auto;
 }
 
 main {
@@ -62,186 +37,37 @@ main {
   padding: 0 20px;
 }
 
-/* SEÇÃO BNCC */
+/* CARDS E CONTEÚDO */
 .section-bncc {
-  background-color: var(--card-bg);
-  border: 3px dashed #d8c4ad;
-  border-radius: 20px;
-  padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 20px var(--sombra);
-}
-
-.section-bncc h2 {
-  font-family: 'Fredoka', cursive;
-  color: #3b2d23;
-  margin-top: 0;
-}
-
-.eixos-bncc {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-.eixo-tag {
-  background: #ede0ce;
-  padding: 8px 14px;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* AGENDAMENTO */
-.box-agendamento {
-  background: #fff3d1;
-  border-left: 8px solid var(--detalhe-amarelo);
+  background-color: #fffbf3;
+  border: 2px dashed #d8c4ad;
   border-radius: 16px;
   padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 15px var(--sombra);
+  margin-bottom: 20px;
 }
 
-.btn-agendar {
-  background-color: #2e7d32;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 10px;
-  transition: transform 0.2s;
-}
-
-.btn-agendar:hover {
-  transform: scale(1.05);
-}
-
-/* CARDS DE DISCIPLINAS */
 .card-materia {
-  background: var(--card-bg);
-  border-radius: 16px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px var(--sombra);
-  border: 2px solid #eae0d0;
-  transition: transform 0.2s;
-}
-
-.card-materia:hover {
-  transform: translateY(-2px);
-}
-
-.card-header {
-  padding: 18px 20px;
-  cursor: pointer;
-  font-family: 'Fredoka', cursive;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.card-content {
-  padding: 0 20px 20px;
-}
-
-.hidden { display: none; }
-
-/* BORDAS COLORIDAS ESTILO ESCOLAR */
-.matematica { border-left: 10px solid #43a047; }
-.ciencias { border-left: 10px solid #fb8c00; }
-.portugues { border-left: 10px solid #1e88e5; }
-.historia { border-left: 10px solid #8e24aa; }
-.geografia { border-left: 10px solid #6d4c41; }
-.ingles { border-left: 10px solid #3949ab; }
-.artes { border-left: 10px solid #d81b60; }
-.edfis { border-left: 10px solid #00897b; }
-
-.link-btn {
-  display: inline-block;
-  background: #ede0ce;
-  color: #3b2d23;
-  padding: 6px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 5px;
+  background: #fffbf3;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #eae0d0;
+  padding: 15px;
 }
 </style>
-
-<script>
-function toggle(id){
-  document.getElementById(id).classList.toggle('hidden');
-}
-</script>
 </head>
 
 <body>
 
 <header>
-  <img src="logo-lca.jpg" id="logo-lca" alt="Selo do Laboratório LCA - EEM Ver. Oscar Manoel da Conceição">
-  <h1 class="titulo-pagina">Cartilha do Laboratório</h1>
-  <p class="subtitulo-pagina">Escola de Ensino Médio Vereador Oscar Manoel da Conceição</p>
+  <!-- Basta salvar a imagem do banner com o nome banner-topo.jpg na sua pasta -->
+  <img src="banner-topo.jpg" alt="Cartilha do Laboratório LCA - EEM Ver. Oscar Manoel da Conceição" class="banner-topo">
 </header>
 
 <main>
-
   <section class="section-bncc">
     <h2>💻 O que é a BNCC da Computação?</h2>
-    <p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação, tornando o ensino de tecnologia parte oficial da educação básica brasileira. Isso significa que a computação atravessa todas as áreas do conhecimento.</p>
-    
-    <div class="eixos-bncc">
-      <span class="eixo-tag">🧠 Pensamento Computacional</span>
-      <span class="eixo-tag">🌐 Mundo Digital</span>
-      <span class="eixo-tag">💡 Cultura Digital</span>
-    </div>
+    <p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação, tornando o ensino de tecnologia parte oficial da educação básica brasileira.</p>
   </section>
-
-  <div class="box-agendamento">
-    <h3 style="margin-top:0;">⚠️ Agendamento das Aulas</h3>
-    <p>O agendamento é feito pelo <b>Agenda1</b>. Utilize sua matrícula (6 primeiros dígitos) para acessar.</p>
-    <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendar">📅 Agendar Aulas no Agenda1</a>
-  </div>
-
-  <!-- MATEMÁTICA -->
-  <div class="card-materia matematica">
-    <div class="card-header" onclick="toggle('mat')">
-      <span>📊 Matemática</span>
-    </div>
-    <div id="mat" class="card-content hidden">
-      <p>Visualize funções, treine operações e torne o abstrato concreto.</p>
-      <p><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank" class="link-btn">Acessar</a></p>
-      <p><b>GeoGebra</b> — <a href="https://geogebra.org" target="_blank" class="link-btn">Acessar</a></p>
-    </div>
-  </div>
-
-  <!-- GEOGRAFIA -->
-  <div class="card-materia geografia">
-    <div class="card-header" onclick="toggle('geo')">
-      <span>🌎 Geografia</span>
-    </div>
-    <div id="geo" class="card-content hidden">
-      <p>Explore o planeta e compreenda os espaços cartográficos e ambientais.</p>
-      <p><b>Google Earth</b> — <a href="https://earth.google.com" target="_blank" class="link-btn">Acessar</a></p>
-      <p><b>IBGE Educação</b> — <a href="https://ibge.gov.br" target="_blank" class="link-btn">Acessar</a></p>
-    </div>
-  </div>
-
-  <!-- LÍNGUA PORTUGUESA -->
-  <div class="card-materia portugues">
-    <div class="card-header" onclick="toggle('port')">
-      <span>📖 Português</span>
-    </div>
-    <div id="port" class="card-content hidden">
-      <p>Desenvolva leitura, escrita e interpretação de forma interativa.</p>
-      <p><b>Domínio Público</b> — <a href="http://dominiopublico.gov.br" target="_blank" class="link-btn">Acessar</a></p>
-      <p><b>Canva</b> — <a href="https://canva.com" target="_blank" class="link-btn">Acessar</a></p>
-    </div>
-  </div>
-
 </main>
 
 </body>
