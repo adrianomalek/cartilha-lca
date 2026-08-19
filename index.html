@@ -12,18 +12,17 @@ body{font-family:Poppins;background:#eef2ff;margin:0}
 
 header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:30px;text-align:center}
 
-/* ESTILO DA NOVA LOGO COMO SELO */
+/* ESTILO DA LOGO BANNER INTEGRADA */
 #logo-lca {
-  width: 100px; /* Tamanho da logo */
-  height: 100px; /* Altura igual para ser um quadrado */
-  border-radius: 50%; /* Faz a borda ser um círculo */
-  object-fit: cover; /* Garante que a imagem preencha o círculo */
-  border: 4px solid white; /* Adiciona uma borda branca para destacar */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Adiciona uma sombra para o efeito de selo */
-  margin-bottom: 15px; /* Espaço abaixo da logo */
-  display: block; /* Garante que ela ocupe seu próprio espaço */
-  margin-left: auto; /* Centraliza horizontalmente */
-  margin-right: auto; /* Centraliza horizontalmente */
+  max-width: 100%;
+  width: 450px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main{max-width:1100px;margin:auto;padding:20px}
@@ -80,10 +79,7 @@ main{max-width:1100px;margin:auto;padding:20px}
 .artes{background:linear-gradient(135deg,#d81b60,#f06292);}
 .edfis{background:linear-gradient(135deg,#00897b,#4db6ac);}
 
-a{color:white}
- a{
-  transition:0.3s;
-}
+a{color:white; transition:0.3s;}
 
 a:hover{
   opacity:0.9;
@@ -101,8 +97,7 @@ function toggle(id){
 <body>
 
 <header>
-<!-- NOVA IMAGEM DA LOGO COM ID PARA ESTILIZAÇÃO E ALT TEXT -->
-<img src="nova_logo_lca.png" id="logo-lca" alt="Selo do Laboratório LCA - Coruja e Materiais Escolares">
+<img src="nova_logo_lca.png" id="logo-lca" alt="Selo do Laboratório LCA - EEM Ver. Oscar Manoel da Conceição">
 <h1>Cartilha do Laboratório</h1>
 <p>Escola de Ensino Médio Vereador Oscar Manoel da Conceição</p>
 </header>
@@ -123,7 +118,8 @@ function toggle(id){
 
 <p>Ao usar o laboratório de informática junto à sua disciplina, você está contribuindo diretamente para o desenvolvimento dessas competências nos alunos — de forma integrada e contextualizada.</p>
 </section>
-  <div style="background:#fff3cd;border-left:6px solid #ffc107;padding:15px 20px;border-radius:10px;margin-bottom:20px;max-width:700px;margin-left:auto;margin-right:auto;">
+
+<div style="background:#fff3cd;border-left:6px solid #ffc107;padding:15px 20px;border-radius:10px;margin-bottom:20px;max-width:700px;margin-left:auto;margin-right:auto;">
 
   <p style="margin:0 0 10px 0;font-weight:600;">
     ⚠️ Agendamento das Aulas
@@ -136,7 +132,7 @@ function toggle(id){
 
   <div style="text-align:center;">
     <a href="https://my.agenda1.app/home" target="_blank"
-       style="background:#2563eb;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;transition:0.3s;">
+       style="background:#2563eb;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;">
        
        📅 Faça o agendamento das aulas por aqui
        
