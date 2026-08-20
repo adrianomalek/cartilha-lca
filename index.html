@@ -6,7 +6,6 @@
   <title>Cartilha do Laboratório - EEM Ver. Oscar Manoel da Conceição</title>
   
   <style>
-    /* Estilos Gerais */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,262 +14,325 @@
     }
 
     body {
-      background-color: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
-      padding-bottom: 40px;
+      background: #f7e8ce url('fundo.jpg') no-repeat center top fixed;
+      background-size: cover;
+      color: #2d3748;
+      min-height: 100vh;
+      padding: 20px 10px 40px;
     }
 
-    /* Cabeçalho */
-    header {
-      background-color: #1a365d;
-      color: #ffffff;
-      text-align: center;
-      padding: 30px 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    header img {
-      max-width: 100%;
-      height: auto;
-      max-height: 180px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    /* Conteúdo Principal */
-    main {
-      max-width: 1000px;
+    .container {
+      max-width: 1050px;
       margin: 0 auto;
-      padding: 0 20px;
     }
 
-    section {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 25px;
+    /* Navegação */
+    nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(5px);
+      border-radius: 30px;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       margin-bottom: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+
+    nav a.active, nav a:hover {
+      background-color: #fffaf0;
+      color: #c05621;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    h2 {
-      color: #2b6cb0;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
+    /* Hero / Bem-vindos */
+    .hero {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(5px);
+      border-radius: 25px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
     }
 
-    /* BNCC Tags */
-    .bncc-pills {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 15px;
-    }
-
-    .pill {
-      background-color: #ebf8ff;
-      color: #2b6cb0;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: 1px solid #bee3f8;
-    }
-
-    /* Bloco de Agendamento */
-    .agendamento {
-      background-color: #fffaf0;
-      border-left: 5px solid #dd6b20;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-    }
-
-    .agendamento h3 {
-      color: #c05621;
-      margin-bottom: 10px;
-    }
-
-    .btn-agendar {
-      display: inline-block;
-      margin-top: 12px;
-      background-color: #dd6b20;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-
-    .btn-agendar:hover {
-      background-color: #c05621;
-    }
-
-    /* Grid de Disciplinas */
-    .grid-disciplinas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card-disciplina {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    }
-
-    .card-header {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #2d3748;
-      border-bottom: 2px solid #edf2f7;
-      padding-bottom: 8px;
-      margin-bottom: 12px;
-    }
-
-    .card-disciplina p {
-      font-size: 0.95rem;
-      color: #4a5568;
+    .hero h1 {
+      font-size: 1.8rem;
+      color: #1a202c;
       margin-bottom: 8px;
     }
 
-    .card-disciplina a {
-      color: #3182ce;
+    .hero p {
+      color: #718096;
+      font-size: 1rem;
+    }
+
+    /* Grid de Cartões Estilo Caderno */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .notebook-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 20px 20px 35px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      background-image: repeating-linear-gradient(white, white 27px, #e2e8f0 28px);
+      line-height: 28px;
+    }
+
+    /* Efeito de Espiral do Caderno */
+    .notebook-card::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      bottom: 15px;
+      width: 10px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #cbd5e0 0px,
+        #cbd5e0 6px,
+        transparent 6px,
+        transparent 14px
+      );
+      border-radius: 4px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #cbd5e0;
+      padding-bottom: 4px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: #4a5568;
+      margin-bottom: 12px;
+    }
+
+    .link-list {
+      list-style: none;
+    }
+
+    .link-list li {
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+
+    .link-list a {
+      color: #2b6cb0;
       text-decoration: none;
       font-weight: 600;
     }
 
-    .card-disciplina a:hover {
+    .link-list a:hover {
       text-decoration: underline;
+    }
+
+    /* Botão em Destaque */
+    .btn-agendamento {
+      display: block;
+      background: #fff;
+      border: 2px solid #2d3748;
+      color: #2d3748;
+      text-align: center;
+      padding: 10px 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      box-shadow: 0 3px 0 #2d3748;
+      transition: all 0.1s;
+    }
+
+    .btn-agendamento:active {
+      transform: translateY(3px);
+      box-shadow: 0 0 0 #2d3748;
+    }
+
+    /* Rodapé */
+    footer {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: #4a5568;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    footer h4 {
+      color: #1a202c;
+      margin-bottom: 5px;
+    }
+
+    footer a {
+      color: #2b6cb0;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- Certifique-se de que o arquivo cartilha.png está na mesma pasta que este arquivo HTML -->
-    <img src="./cartilha.png" alt="Cartilha do Laboratório - EEM Ver. Oscar Manoel da Conceição" onerror="this.style.display='none';">
-    <h1>Cartilha do Laboratório</h1>
-    <p>Escola de Ensino Médio Vereador Oscar Manoel da Conceição</p>
-  </header>
+  <div class="container">
 
-  <main>
+    <!-- Menu Superior -->
+    <nav>
+      <a href="#" class="active">🏠 Início</a>
+      <a href="#bncc">ℹ️ Sobre</a>
+      <a href="#disciplinas">📚 Disciplinas</a>
+      <a href="#agendamento">📅 Agendamento</a>
+    </nav>
 
-    <!-- Seção BNCC -->
-    <section>
-      <h2>💻 O que é a BNCC da Computação?</h2>
-      <p>Em 2023, o Ministério da Educação homologou o Complemento à BNCC para Computação, tornando o ensino de tecnologia parte oficial da educação básica brasileira. Isso significa que a computação não é mais uma disciplina isolada: ela atravessa todas as áreas do conhecimento.</p>
-      
-      <div class="bncc-pills">
-        <span class="pill">🧠 Pensamento Computacional</span>
-        <span class="pill">🌐 Mundo Digital</span>
-        <span class="pill">💡 Cultura Digital</span>
-      </div>
-    </section>
-
-    <!-- Seção Agendamento -->
-    <div class="agendamento">
-      <h3>⚠️ Agendamento das Aulas</h3>
-      <p>O agendamento das aulas é feito pelo <b>Agenda1</b>, um aplicativo gratuito que você pode baixar e acessar pelo link abaixo. Utilize seu número de matrícula (6 primeiros dígitos) para realizar o login.</p>
-      <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendar">📅 Faça o agendamento das aulas por aqui</a>
+    <!-- Cabeçalho Principal / Hero -->
+    <div class="hero">
+      <h1>Bem-vindos ao Nosso Laboratório Criativo!</h1>
+      <p>Explore, Crie, Aprenda. Um espaço dedicado à computação, inovação e educação.</p>
     </div>
 
-    <!-- Grid de Disciplinas -->
-    <div class="grid-disciplinas">
+    <!-- Grid de Cartões -->
+    <div class="grid-cards" id="disciplinas">
+
+      <!-- BNCC da Computação -->
+      <div class="notebook-card" id="bncc">
+        <div class="card-title">💻 BNCC da Computação</div>
+        <p class="card-desc">Integrando tecnologia e inovação em todas as áreas do conhecimento básico.</p>
+        <ul class="link-list">
+          <li>🧠 Pensamento Computacional</li>
+          <li>🌐 Mundo Digital</li>
+          <li>💡 Cultura Digital</li>
+        </ul>
+      </div>
+
+      <!-- Agendamento de Aulas -->
+      <div class="notebook-card" id="agendamento">
+        <div class="card-title">📅 Agendamento de Aulas</div>
+        <p class="card-desc">Reserve seu horário no laboratório pelo sistema Agenda1 utilizando sua matrícula.</p>
+        <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendamento">🗓️ Agenda Digital - Faça seu Agendamento</a>
+      </div>
 
       <!-- Matemática -->
-      <div class="card-disciplina">
-        <div class="card-header">📊 Matemática</div>
-        <p>Visualize funções, treine operações e torne o abstrato concreto.</p>
-        <p><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
-        <p><b>GeoGebra</b> — <a href="https://geogebra.org" target="_blank">Acessar</a></p>
-        <p><b>PhET</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-        <p><b>Matific</b> — <a href="https://matific.com" target="_blank">Acessar</a></p>
+      <div class="notebook-card">
+        <div class="card-title">📊 Ferramentas de Matemática</div>
+        <p class="card-desc">Visualize funções, treine operações e torne o abstrato concreto.</p>
+        <ul class="link-list">
+          <li><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank">Acessar ↗</a></li>
+          <li><b>GeoGebra</b> — <a href="https://geogebra.org" target="_blank">Acessar ↗</a></li>
+          <li><b>PhET</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
+          <li><b>Matific</b> — <a href="https://matific.com" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
       <!-- Ciências -->
-      <div class="card-disciplina">
-        <div class="card-header">🔬 Ciências</div>
-        <p>Explore fenômenos naturais e desperte a curiosidade científica.</p>
-        <p><b>PhET</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar</a></p>
-        <p><b>BD Ciências</b> — <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar</a></p>
-        <p><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank">Acessar</a></p>
-        <p><b>EduCAPES</b> — <a href="https://educapes.capes.gov.br" target="_blank">Acessar</a></p>
+      <div class="notebook-card">
+        <div class="card-title">🔬 Laboratório de Ciências</div>
+        <p class="card-desc">Explore fenômenos naturais e desperte a curiosidade científica.</p>
+        <ul class="link-list">
+          <li><b>PhET Simuladores</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
+          <li><b>BD Ciências</b> — <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar ↗</a></li>
+          <li><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank">Acessar ↗</a></li>
+          <li><b>EduCAPES</b> — <a href="https://educapes.capes.gov.br" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
       <!-- Português -->
-      <div class="card-disciplina">
-        <div class="card-header">📖 Português</div>
-        <p>Desenvolva leitura, escrita e interpretação de forma interativa e criativa.</p>
-        <p><b>Norma Culta</b> — <a href="https://normaculta.com.br" target="_blank">Acessar</a></p>
-        <p><b>Domínio Público</b> — <a href="http://dominiopublico.gov.br" target="_blank">Acessar</a></p>
-        <p><b>Canva</b> — <a href="https://canva.com" target="_blank">Acessar</a></p>
-        <p><b>Wordwall</b> — <a href="https://wordwall.net" target="_blank">Acessar</a></p>
+      <div class="notebook-card">
+        <div class="card-title">📖 Atividades de Linguagem</div>
+        <p class="card-desc">Desenvolva leitura, escrita e interpretação de forma interativa.</p>
+        <ul class="link-list">
+          <li><b>Norma Culta</b> — <a href="https://normaculta.com.br" target="_blank">Acessar ↗</a></li>
+          <li><b>Domínio Público</b> — <a href="http://dominiopublico.gov.br" target="_blank">Acessar ↗</a></li>
+          <li><b>Canva</b> — <a href="https://canva.com" target="_blank">Acessar ↗</a></li>
+          <li><b>Wordwall</b> — <a href="https://wordwall.net" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
       <!-- História -->
-      <div class="card-disciplina">
-        <div class="card-header">🏛️ História</div>
-        <p>Conheça o passado e compreenda o presente.</p>
-        <p><b>Google Arts & Culture</b> — <a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
-        <p><b>Museu da Pessoa</b> — <a href="https://museudapessoa.org" target="_blank">Acessar</a></p>
-        <p><b>Brasiliana USP</b> — <a href="https://brasiliana.usp.br" target="_blank">Acessar</a></p>
+      <div class="notebook-card">
+        <div class="card-title">🏛️ Recursos de História</div>
+        <p class="card-desc">Conheça o passado e compreenda o presente.</p>
+        <ul class="link-list">
+          <li><b>Google Arts & Culture</b> — <a href="https://artsandculture.google.com" target="_blank">Acessar ↗</a></li>
+          <li><b>Museu da Pessoa</b> — <a href="https://museudapessoa.org" target="_blank">Acessar ↗</a></li>
+          <li><b>Brasiliana USP</b> — <a href="https://brasiliana.usp.br" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
       <!-- Geografia -->
-      <div class="card-disciplina">
-        <div class="card-header">🌎 Geografia</div>
-        <p>Explore o planeta e compreenda os espaços.</p>
-        <p><b>Google Earth</b> — <a href="https://earth.google.com" target="_blank">Acessar</a></p>
-        <p><b>IBGE</b> — <a href="https://ibge.gov.br" target="_blank">Acessar</a></p>
-        <p><b>Climatempo</b> — <a href="https://climatempo.com.br" target="_blank">Acessar</a></p>
+      <div class="notebook-card">
+        <div class="card-title">🌎 Recursos de Geografia</div>
+        <p class="card-desc">Explore o planeta e compreenda os espaços.</p>
+        <ul class="link-list">
+          <li><b>Google Earth</b> — <a href="https://earth.google.com" target="_blank">Acessar ↗</a></li>
+          <li><b>IBGE Educa</b> — <a href="https://ibge.gov.br" target="_blank">Acessar ↗</a></li>
+          <li><b>Climatempo</b> — <a href="https://climatempo.com.br" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
       <!-- Inglês -->
-      <div class="card-disciplina">
-        <div class="card-header">🇬🇧 Inglês</div>
-        <p>Aprenda inglês de forma interativa.</p>
-        <p><b>Duolingo</b> — <a href="https://duolingo.com" target="_blank">Acessar</a></p>
-        <p><b>British Council</b> — <a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar</a></p>
+      <div class="card-disciplina notebook-card">
+        <div class="card-title">🇬🇧 Língua Inglesa</div>
+        <p class="card-desc">Aprenda inglês de forma interativa e divertida.</p>
+        <ul class="link-list">
+          <li><b>Duolingo</b> — <a href="https://duolingo.com" target="_blank">Acessar ↗</a></li>
+          <li><b>British Council</b> — <a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
       <!-- Artes -->
-      <div class="card-disciplina">
-        <div class="card-header">🎨 Artes</div>
-        <p>Explore a criatividade e expressão artística.</p>
-        <p><b>Google Arts & Culture</b> — <a href="https://artsandculture.google.com" target="_blank">Acessar</a></p>
-        <p><b>Canva</b> — <a href="https://canva.com" target="_blank">Acessar</a></p>
-        <p><b>Chrome Music Lab</b> — <a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar</a></p>
-      </div>
-
-      <!-- Educação Física -->
-      <div class="card-disciplina">
-        <div class="card-header">🏃 Educação Física</div>
-        <p>Movimente o corpo e desenvolva hábitos saudáveis.</p>
-        <p><b>YouTube</b> — <a href="https://youtube.com" target="_blank">Acessar</a></p>
-        <p><b>COB</b> — <a href="https://cob.org.br" target="_blank">Acessar</a></p>
+      <div class="notebook-card">
+        <div class="card-title">🎨 Oficinas de Artes</div>
+        <p class="card-desc">Explore a criatividade e a expressão artística digital.</p>
+        <ul class="link-list">
+          <li><b>Google Arts & Culture</b> — <a href="https://artsandculture.google.com" target="_blank">Acessar ↗</a></li>
+          <li><b>Canva</b> — <a href="https://canva.com" target="_blank">Acessar ↗</a></li>
+          <li><b>Chrome Music Lab</b> — <a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar ↗</a></li>
+        </ul>
       </div>
 
     </div>
 
-  </main>
+    <!-- Rodapé -->
+    <footer>
+      <div>
+        <h4>EEM. Ver. Oscar Manoel da Conceição</h4>
+        <p>Escola Jovem Sul da Ilha</p>
+      </div>
+      <div>
+        <h4>Links Rápidos</h4>
+        <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a> | <a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Laboratório de Computação Aplicada (LCA)</p>
+      </div>
+    </footer>
+
+  </div>
 
 </body>
 </html>
