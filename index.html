@@ -14,7 +14,8 @@
     }
 
     body {
-      background: #f7e8ce url('fundo.jpg') no-repeat center top fixed;
+      /* Imagem de fundo apontando para o repositório ou imagem remota */
+      background: #f5e8cf url('https://raw.githubusercontent.com/adrianomalek/cartilha-lca/main/Cartilha.jpg') no-repeat center top fixed;
       background-size: cover;
       color: #2d3748;
       min-height: 100vh;
@@ -26,10 +27,26 @@
       margin: 0 auto;
     }
 
+    /* Cabeçalho da Escola com a Coruja */
+    .school-header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .school-logo {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     /* Navegação */
     nav {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
       border-radius: 30px;
       padding: 10px 25px;
       display: flex;
@@ -38,7 +55,7 @@
       gap: 20px;
       flex-wrap: wrap;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     nav a {
@@ -59,24 +76,24 @@
 
     /* Hero / Bem-vindos */
     .hero {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
       border-radius: 25px;
-      padding: 30px 20px;
+      padding: 25px 20px;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .hero h1 {
       font-size: 1.8rem;
       color: #1a202c;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .hero p {
       color: #718096;
-      font-size: 1rem;
+      font-size: 0.98rem;
     }
 
     /* Grid de Cartões Estilo Caderno */
@@ -84,15 +101,15 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 25px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     .notebook-card {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.97);
       border-radius: 16px;
       padding: 20px 20px 20px 35px;
       position: relative;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       background-image: repeating-linear-gradient(white, white 27px, #e2e8f0 28px);
       line-height: 1.5;
     }
@@ -107,8 +124,8 @@
       width: 10px;
       background: repeating-linear-gradient(
         to bottom,
-        #cbd5e0 0px,
-        #cbd5e0 6px,
+        #a0aec0 0px,
+        #a0aec0 6px,
         transparent 6px,
         transparent 14px
       );
@@ -116,7 +133,7 @@
     }
 
     .card-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #1a202c;
       margin-bottom: 10px;
@@ -125,7 +142,7 @@
     }
 
     .card-desc {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #4a5568;
       margin-bottom: 12px;
     }
@@ -136,7 +153,7 @@
 
     .link-list li {
       margin-bottom: 8px;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
 
     .link-list a {
@@ -172,8 +189,8 @@
 
     /* Rodapé */
     footer {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
       border-radius: 20px;
       padding: 20px 30px;
       display: flex;
@@ -199,6 +216,11 @@
 <body>
 
   <div class="container">
+
+    <!-- Logo da Escola -->
+    <div class="school-header">
+      <img src="cartilha.png" alt="EEM. Ver. Oscar Manoel da Conceição" class="school-logo" onerror="this.style.display='none';">
+    </div>
 
     <!-- Menu Superior -->
     <nav>
