@@ -26,7 +26,7 @@
       margin: 0 auto;
     }
 
-    /* Selo / Logo Centralizado da Coruja */
+    /* Selo / Logo Centralizado da Coruja (Tamanho Ampliado) */
     .school-logo-container {
       display: flex;
       justify-content: center;
@@ -35,12 +35,12 @@
     }
 
     .school-seal {
-      width: 120px;
-      height: 120px;
-      background: rgba(253, 248, 237, 0.9);
+      width: 190px;
+      height: 190px;
+      background: rgba(253, 248, 237, 0.95);
       border-radius: 50%;
-      padding: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -131,7 +131,7 @@
       position: relative;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
       background-image: repeating-linear-gradient(white, white 31px, #e2e8f0 32px);
-      min-height: 170px;
+      min-height: 180px;
       display: flex;
       flex-direction: column;
     }
@@ -160,9 +160,16 @@
       font-size: 1.1rem;
       font-weight: 800;
       color: #1a202c;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-align: center;
       line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 0.83rem;
+      color: #4a5568;
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
 
     /* Botão em Destaque */
@@ -187,12 +194,21 @@
       box-shadow: 0 1px 0 #2d3748;
     }
 
-    /* Links Internos dos Cartões */
+    /* Links e Listas Internas */
+    .link-list {
+      list-style: none;
+    }
+
+    .link-list li {
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+
     .link-item {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-decoration: none;
       color: #1a202c;
     }
@@ -251,30 +267,22 @@
 
   <div class="container">
 
-    <!-- Logo da Escola (Selo da Coruja) -->
+    <!-- Logo da Escola (Coruja em Destaque Ampliado) -->
     <div class="school-logo-container">
       <div class="school-seal">
-        <svg viewBox="0 0 100 100" width="100" height="100">
-          <!-- Borda do Selo -->
+        <svg viewBox="0 0 100 100" width="170" height="170">
           <circle cx="50" cy="50" r="46" fill="none" stroke="#2d3748" stroke-width="2"/>
           <circle cx="50" cy="50" r="42" fill="none" stroke="#2d3748" stroke-width="1" stroke-dasharray="3,2"/>
           
-          <!-- Coruja -->
-          <!-- Cabeça e Orelhas -->
           <path d="M 35 38 L 40 46 L 60 46 L 65 38 L 62 55 C 62 65 38 65 38 55 Z" fill="none" stroke="#2d3748" stroke-width="2"/>
-          <!-- Olhos -->
           <circle cx="43" cy="48" r="4" fill="none" stroke="#2d3748" stroke-width="1.5"/>
           <circle cx="43" cy="48" r="1.5" fill="#2d3748"/>
           <circle cx="57" cy="48" r="4" fill="none" stroke="#2d3748" stroke-width="1.5"/>
           <circle cx="57" cy="48" r="1.5" fill="#2d3748"/>
-          <!-- Bico -->
           <polygon points="50,50 48,54 52,54" fill="#2d3748"/>
-          <!-- Corpo -->
           <path d="M 40 58 C 40 72 60 72 60 58" fill="none" stroke="#2d3748" stroke-width="2"/>
-          <!-- Asas/Penas -->
           <path d="M 45 62 Q 50 66 55 62" fill="none" stroke="#2d3748" stroke-width="1"/>
           
-          <!-- Texto Curvo (E.E.M. Ver. Oscar Manoel da Conceição) -->
           <path id="textPathTop" d="M 12 50 A 38 38 0 0 1 88 50" fill="none"/>
           <text font-size="6.5" font-weight="bold" fill="#2d3748">
             <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
@@ -311,12 +319,18 @@
     <!-- Grid de Cartões -->
     <div class="grid-cards">
 
-      <!-- BNCC da Computação -->
+      <!-- 1. BNCC da Computação -->
       <div class="notebook-card">
         <div class="card-title">BNCC da Computação</div>
+        <p class="card-desc">Desenvolvimento do pensamento computacional, cultura digital e mundo digital na educação básica.</p>
+        <ul class="link-list">
+          <li>🧠 Pensamento Computacional</li>
+          <li>🌐 Mundo Digital</li>
+          <li>💡 Cultura Digital</li>
+        </ul>
       </div>
 
-      <!-- Agendamento de Aulas -->
+      <!-- 2. Agendamento de Aulas -->
       <div class="notebook-card">
         <div class="card-title">Agendamento de Aulas</div>
         <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendamento">
@@ -324,7 +338,7 @@
         </a>
       </div>
 
-      <!-- Ferramentas de Matemática -->
+      <!-- 3. Ferramentas de Matemática -->
       <div class="notebook-card">
         <div class="card-title">Ferramentas de Matemática</div>
         
@@ -345,42 +359,114 @@
         </a>
       </div>
 
-      <!-- Laboratório de Ciências -->
+      <!-- 4. Laboratório de Ciências -->
       <div class="notebook-card">
         <div class="card-title">Laboratório de Ciências</div>
+        <p class="card-desc">Simulações virtuais e experimentos de biologia, física e química para investigação científica.</p>
+        <ul class="link-list">
+          <li><b>PhET Simuladores</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank" style="color: #2b6cb0;">Acessar ↗</a></li>
+          <li><b>BD Ciências</b> — <a href="http://bdc.ib.unicamp.br" target="_blank" style="color: #2b6cb0;">Acessar ↗</a></li>
+          <li><b>EduCAPES</b> — <a href="https://educapes.capes.gov.br" target="_blank" style="color: #2b6cb0;">Acessar ↗</a></li>
+        </ul>
       </div>
 
-      <!-- Oficinas de Artes -->
+      <!-- 5. Física -->
+      <div class="notebook-card">
+        <div class="card-title">Recursos de Física</div>
+        <p class="card-desc">Simulações interativas de mecânica, termodinâmica e eletromagnetismo.</p>
+        <a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank" class="link-item">
+          <span style="font-size: 1.3rem;">⚡</span>
+          <div class="link-text">
+            <span class="link-title">Simulações de Física</span>
+            <span class="link-url">PhET Física ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 6. Química -->
+      <div class="notebook-card">
+        <div class="card-title">Recursos de Química</div>
+        <p class="card-desc">Tabelas periódicas interativas, estrutura molecular e reações químicas virtuais.</p>
+        <a href="https://pt.khanacademy.org/science/chemistry" target="_blank" class="link-item">
+          <span style="font-size: 1.3rem;">🧪</span>
+          <div class="link-text">
+            <span class="link-title">Química Interativa</span>
+            <span class="link-url">Khan Química ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 7. Geografia -->
+      <div class="notebook-card">
+        <div class="card-title">Geografia & Mapas</div>
+        <p class="card-desc">Mapeamento interativo, climatologia e geopolítica através de dados geográficos.</p>
+        <a href="https://earth.google.com/web/" target="_blank" class="link-item">
+          <span style="font-size: 1.3rem;">🌍</span>
+          <div class="link-text">
+            <span class="link-title">Google Earth</span>
+            <span class="link-url">Navegar no Globo ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 8. Educação Física -->
+      <div class="notebook-card">
+        <div class="card-title">Educação Física</div>
+        <p class="card-desc">Conteúdos sobre anatomia, saúde, movimento corporal e modalidades esportivas.</p>
+        <a href="https://plataforma.saude.gov.br" target="_blank" class="link-item">
+          <span style="font-size: 1.3rem;">⚽</span>
+          <div class="link-text">
+            <span class="link-title">Corpo & Movimento</span>
+            <span class="link-url">Recursos Didáticos ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 9. Língua Inglesa -->
+      <div class="notebook-card">
+        <div class="card-title">Língua Inglesa</div>
+        <p class="card-desc">Plataformas de aprendizado de idiomas, vocabulário e gramática interativa.</p>
+        <a href="https://www.duolingo.com" target="_blank" class="link-item">
+          <span style="font-size: 1.3rem;">🔤</span>
+          <div class="link-text">
+            <span class="link-title">Prática de Inglês</span>
+            <span class="link-url">Duolingo / ESL ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 10. Oficinas de Artes -->
       <div class="notebook-card">
         <div class="card-title">Oficinas de Artes</div>
         <a href="https://canva.com" target="_blank" class="link-item">
           <span style="font-size: 1.3rem;">🎨</span>
           <div class="link-text">
-            <span class="link-title">Oficinas de Artes</span>
-            <span class="link-url">Oficinas de Artes ↗</span>
+            <span class="link-title">Design e Criação</span>
+            <span class="link-url">Canva ↗</span>
           </div>
         </a>
       </div>
 
-      <!-- Recursos de História -->
+      <!-- 11. Recursos de História -->
       <div class="notebook-card">
         <div class="card-title">Recursos de História</div>
         <a href="https://artsandculture.google.com" target="_blank" class="link-item">
           <span style="font-size: 1.3rem;">📖</span>
           <div class="link-text">
-            <span class="link-title">História</span>
-            <span class="link-url">Recursos de história ↗</span>
+            <span class="link-title">Acervo Histórico</span>
+            <span class="link-url">Google Arts & Culture ↗</span>
           </div>
         </a>
       </div>
 
-      <!-- Atividades de Linguagem -->
+      <!-- 12. Atividades de Linguagem -->
       <div class="notebook-card">
         <div class="card-title">Atividades de Linguagem</div>
         <a href="https://normaculta.com.br" target="_blank" class="link-item">
           <span style="font-size: 1.3rem;">💬</span>
           <div class="link-text">
-            <span class="link-title">Atividades de Linguagem</span>
+            <span class="link-title">Gramática e Escrita</span>
+            <span class="link-url">Norma Culta ↗</span>
           </div>
         </a>
       </div>
