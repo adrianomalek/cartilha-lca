@@ -1,356 +1,1001 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartilha do Laboratório - EEM Ver. Oscar Manoel da Conceição</title>
-  
+
+  <title>Laboratório Criativo - EEM Ver. Oscar Manoel da Conceição</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
+
+    /* =====================================================
+       CONFIGURAÇÕES GERAIS
+    ===================================================== */
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      /* Usa a imagem com a moldura e ilustrações como plano de fundo */
-      background: #f3e5c8 url('fundo.jpg') no-repeat center top fixed;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #222;
+
+      /*
+        Coloque na mesma pasta deste arquivo:
+        fundo.jpg
+      */
+      background-color: #f4e5c7;
+      background-image: url("fundo.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
       background-size: cover;
-      color: #2d3748;
+      background-attachment: fixed;
+
       min-height: 100vh;
-      padding: 140px 20px 40px; /* Espaço no topo para não cobrir a coruja do fundo */
+      padding: 140px 20px 40px;
     }
 
+
+    /* =====================================================
+       CONTAINER PRINCIPAL
+    ===================================================== */
+
     .container {
+      width: 100%;
       max-width: 980px;
       margin: 0 auto;
     }
 
-    /* Menu Superior Estilo Pílula */
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
     nav {
-      background: rgba(253, 248, 237, 0.95);
-      border-radius: 30px;
-      padding: 10px 30px;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto 14px;
+
+      background: rgba(255, 250, 239, 0.96);
+
+      border-radius: 35px;
+
+      padding: 7px 18px;
+
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 25px;
-      flex-wrap: wrap;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 25px;
+      justify-content: center;
+
+      gap: 8px;
+
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.10);
+
+      border: 1px solid rgba(120, 90, 50, 0.12);
     }
 
     nav a {
-      text-decoration: none;
-      color: #2d3748;
-      font-weight: 700;
-      font-size: 0.92rem;
-      padding: 6px 16px;
-      border-radius: 20px;
+      position: relative;
+
       display: flex;
       align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
+      gap: 7px;
+
+      padding: 9px 13px;
+
+      border-radius: 20px;
+
+      text-decoration: none;
+
+      color: #111;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: 0.25s ease;
     }
 
-    nav a.active, nav a:hover {
-      background-color: #fcecd7;
-      color: #8c431f;
+    nav a i {
+      font-size: 17px;
     }
 
-    /* Card Hero / Boas-Vindas */
+    nav a:hover {
+      background: #f7ead7;
+      transform: translateY(-1px);
+    }
+
+    nav a.active {
+      color: #8b4d2d;
+      background: #f7ead7;
+    }
+
+    nav a.active::after {
+      content: "";
+
+      position: absolute;
+
+      bottom: -3px;
+      left: 12px;
+      right: 12px;
+
+      height: 3px;
+
+      background: #b56c3e;
+
+      border-radius: 10px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
     .hero {
-      background: rgba(253, 248, 237, 0.95);
-      border-radius: 25px;
-      padding: 30px 20px;
+      background: rgba(255, 252, 244, 0.96);
+
+      border-radius: 28px;
+
+      padding: 25px 25px 22px;
+
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+      box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+      border: 1px solid rgba(120, 90, 50, 0.15);
+
       margin-bottom: 35px;
     }
 
     .hero h1 {
-      font-size: 1.8rem;
+      font-size: 28px;
+
       font-weight: 800;
-      color: #1a202c;
-      margin-bottom: 8px;
+
+      color: #111;
+
+      margin-bottom: 5px;
     }
 
     .hero p {
-      color: #4a5568;
-      font-size: 0.98rem;
+      font-size: 15px;
+
+      color: #222;
+
       font-weight: 500;
     }
 
-    /* Grid de Cartões (3 colunas) */
+
+    /* =====================================================
+       GRID
+    ===================================================== */
+
     .grid-cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 40px;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+
+      margin-bottom: 35px;
     }
 
-    @media (max-width: 900px) {
-      .grid-cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
 
-    @media (max-width: 600px) {
-      .grid-cards {
-        grid-template-columns: 1fr;
-      }
-    }
+    /* =====================================================
+       CARTÃO ESTILO CADERNO
+    ===================================================== */
 
-    /* Card Estilo Bloco de Notas / Caderno com Espiral */
     .notebook-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 20px 20px 20px 42px;
+
       position: relative;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-      background-image: repeating-linear-gradient(white, white 31px, #e2e8f0 32px);
+
       min-height: 180px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+
+      padding: 20px 18px 18px 40px;
+
+      background-color: #fffdf7;
+
+      border-radius: 16px;
+
+      border: 1px solid #d8d0bf;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.14);
+
+      /*
+        Linhas do papel
+      */
+      background-image:
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0px,
+          transparent 30px,
+          #d8e0e2 31px,
+          transparent 32px
+        );
+
+      transition: transform 0.25s ease,
+                  box-shadow 0.25s ease;
     }
 
-    /* Espiral do Bloco de Notas (Lado Esquerdo) */
-    .notebook-card::before {
-      content: '';
-      position: absolute;
-      left: 12px;
-      top: 15px;
-      bottom: 15px;
-      width: 14px;
-      background: repeating-linear-gradient(
-        to bottom,
-        #e2e8f0 0px,
-        #cbd5e0 4px,
-        #cbd5e0 8px,
-        transparent 8px,
-        transparent 18px
-      );
-      border-radius: 10px;
-      box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+    .notebook-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 9px 18px rgba(0, 0, 0, 0.18);
     }
+
+
+    /* =====================================================
+       ESPIRAL DO CADERNO
+    ===================================================== */
+
+    .notebook-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 7px;
+      top: 13px;
+      bottom: 13px;
+
+      width: 19px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #fffdf7 0px,
+          #fffdf7 4px,
+          #b7b0a4 4px,
+          #b7b0a4 5px,
+          transparent 6px
+        );
+
+      background-size: 19px 25px;
+
+      border-right: 1px solid #c7c0b5;
+    }
+
+
+    /* =====================================================
+       TÍTULO DOS CARTÕES
+    ===================================================== */
 
     .card-title {
-      font-size: 1.1rem;
+
+      font-size: 17px;
+
       font-weight: 800;
-      color: #1a202c;
-      margin-bottom: 12px;
-      text-align: center;
-      line-height: 1.3;
+
+      color: #171717;
+
+      margin-bottom: 15px;
+
+      line-height: 1.15;
+
+      text-align: left;
     }
 
-    /* Estilo dos Botões e Links Internos */
-    .btn-agendamento {
-      display: block;
-      background: #ffffff;
-      border: 2px solid #2d3748;
-      color: #1a202c;
-      text-align: center;
-      padding: 10px 12px;
-      border-radius: 12px;
+
+    /* =====================================================
+       LINKS
+    ===================================================== */
+
+    .link-item {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
       text-decoration: none;
+
+      color: #111;
+
+      margin-bottom: 13px;
+
+      padding: 3px 4px;
+
+      border-radius: 8px;
+
+      transition: 0.2s ease;
+    }
+
+    .link-item:hover {
+      background: rgba(255,255,255,0.75);
+    }
+
+
+    /* Ícone do link */
+
+    .link-icon {
+
+      width: 31px;
+      height: 31px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      font-size: 22px;
+    }
+
+
+    .link-text {
+
+      display: flex;
+
+      flex-direction: column;
+
+      line-height: 1.1;
+    }
+
+
+    .link-title {
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      color: #111;
+    }
+
+
+    .link-url {
+
+      font-size: 12px;
+
+      color: #111;
+
+      text-decoration: underline;
+
+      margin-top: 2px;
+    }
+
+
+    /* =====================================================
+       BOTÃO AGENDAMENTO
+    ===================================================== */
+
+    .btn-agendamento {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      width: 100%;
+
+      background: rgba(255,255,255,0.88);
+
+      border: 1.5px solid #222;
+
+      border-radius: 9px;
+
+      color: #111;
+
+      text-align: center;
+
+      padding: 10px 8px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
       font-weight: 700;
-      font-size: 0.85rem;
-      margin-top: auto;
-      box-shadow: 0 3px 0 #2d3748;
-      transition: transform 0.1s;
+
+      margin-top: 25px;
+
+      box-shadow:
+        0 2px 0 #222;
+
+      transition: 0.15s ease;
+    }
+
+    .btn-agendamento:hover {
+      background: #fff;
+
+      transform: translateY(-1px);
     }
 
     .btn-agendamento:active {
       transform: translateY(2px);
-      box-shadow: 0 1px 0 #2d3748;
+
+      box-shadow: none;
     }
 
-    .link-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-      text-decoration: none;
-      color: #1a202c;
+
+    /* =====================================================
+       CORES DOS ÍCONES
+    ===================================================== */
+
+    .icon-green {
+      color: #1ea978;
     }
 
-    .link-icon {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      flex-shrink: 0;
+    .icon-purple {
+      color: #7153a6;
     }
 
-    .link-text {
-      display: flex;
-      flex-direction: column;
+    .icon-blue {
+      color: #3779b7;
     }
 
-    .link-title {
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: #1a202c;
+    .icon-orange {
+      color: #e27d32;
     }
 
-    .link-url {
-      font-size: 0.8rem;
-      color: #2b6cb0;
-      text-decoration: underline;
-      font-weight: 600;
+    .icon-red {
+      color: #c84c48;
     }
 
-    /* Rodapé */
+
+    /* =====================================================
+       RODAPÉ
+    ===================================================== */
+
     footer {
-      background: rgba(253, 248, 237, 0.95);
+
+      background: rgba(255, 248, 231, 0.96);
+
       border-radius: 20px;
-      padding: 20px 35px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 0.85rem;
-      color: #4a5568;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+      padding: 18px 18px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.5fr 1fr 1fr;
+
+      gap: 25px;
+
+      box-shadow:
+        0 5px 15px rgba(0,0,0,0.12);
+
+      border: 1px solid rgba(120,90,50,0.12);
+
+      font-size: 13px;
+
+      color: #222;
     }
 
     footer h4 {
-      color: #1a202c;
+
+      color: #111;
+
+      font-size: 14px;
+
       font-weight: 800;
-      margin-bottom: 6px;
+
+      margin-bottom: 5px;
+    }
+
+    footer p {
+
+      margin-bottom: 3px;
+
+      line-height: 1.3;
     }
 
     footer a {
-      color: #1a202c;
-      text-decoration: none;
+
+      color: #111;
+
+      text-decoration: underline;
+
       font-weight: 600;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #8b4d2d;
     }
+
+
+    /* =====================================================
+       RESPONSIVIDADE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      body {
+        padding-top: 80px;
+      }
+
+      .grid-cards {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+
+
+    @media (max-width: 650px) {
+
+      body {
+        padding: 25px 12px 25px;
+
+        background-attachment: scroll;
+      }
+
+      nav {
+
+        border-radius: 20px;
+
+        gap: 3px;
+
+        padding: 7px;
+
+        flex-wrap: wrap;
+      }
+
+      nav a {
+
+        font-size: 12px;
+
+        padding: 7px 9px;
+      }
+
+      nav a i {
+        font-size: 14px;
+      }
+
+      .hero {
+
+        padding: 22px 15px;
+
+        margin-bottom: 22px;
+      }
+
+      .hero h1 {
+        font-size: 22px;
+      }
+
+      .hero p {
+        font-size: 13px;
+      }
+
+      .grid-cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+      }
+
+      .notebook-card {
+        min-height: 160px;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+      }
+    }
+
+
+    /* =====================================================
+       ANIMAÇÃO SUAVE
+    ===================================================== */
+
+    .notebook-card,
+    .hero,
+    nav,
+    footer {
+      animation: aparecer 0.5s ease;
+    }
+
+    @keyframes aparecer {
+
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 <body>
 
   <div class="container">
 
-    <!-- Menu Superior -->
+
+    <!-- ===================================================
+         MENU
+    =================================================== -->
+
     <nav>
-      <a href="#" class="active">🏠 Início</a>
-      <a href="#sobre">ℹ️ Sobre</a>
-      <a href="#cursos">📚 Cursos</a>
-      <a href="#galeria">🖼️ Galeria</a>
-      <a href="#contato">✉️ Contato</a>
-      <a href="#aluno">👤 Área do Aluno</a>
+
+      <a href="#" class="active">
+        <i class="fa-solid fa-house"></i>
+        Início
+      </a>
+
+      <a href="#sobre">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre
+      </a>
+
+      <a href="#cursos">
+        <i class="fa-solid fa-layer-group"></i>
+        Cursos
+      </a>
+
+      <a href="#galeria">
+        <i class="fa-regular fa-image"></i>
+        Galeria
+      </a>
+
+      <a href="#contato">
+        <i class="fa-regular fa-envelope"></i>
+        Contato
+      </a>
+
+      <a href="#aluno">
+        <i class="fa-regular fa-user"></i>
+        Área do Aluno
+      </a>
+
     </nav>
 
-    <!-- Cabeçalho Principal / Hero -->
-    <div class="hero">
-      <h1>Bem-vindos ao Nosso Laboratório Criativo!</h1>
-      <p>Explore, Crie, Aprenda. Um espaço dedicado à computação, inovação e educação.</p>
-    </div>
 
-    <!-- Grid de Cartões -->
-    <div class="grid-cards">
 
-      <!-- BNCC da Computação -->
+    <!-- ===================================================
+         HERO
+    =================================================== -->
+
+    <section class="hero">
+
+      <h1>
+        Bem-vindos ao Nosso Laboratório Criativo!
+      </h1>
+
+      <p>
+        Explore, Crie, Aprenda. Um espaço dedicado à computação,
+        inovação e educação.
+      </p>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CARTÕES
+    =================================================== -->
+
+    <section class="grid-cards">
+
+
+      <!-- BNCC -->
+
       <div class="notebook-card">
-        <div class="card-title">BNCC da Computação</div>
+
+        <div class="card-title">
+          BNCC da Computação
+        </div>
+
       </div>
 
-      <!-- Agendamento de Aulas -->
+
+
+      <!-- AGENDAMENTO -->
+
       <div class="notebook-card">
-        <div class="card-title">Agendamento de Aulas</div>
-        <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendamento">
-          📋 Agenda Digital - Faça seu Agendamento
+
+        <div class="card-title">
+          Agendamento de Aulas
+        </div>
+
+        <a
+          href="https://my.agenda1.app/home"
+          target="_blank"
+          class="btn-agendamento"
+        >
+
+          <i class="fa-regular fa-calendar"></i>
+
+          Agenda Digital - Faça seu Agendamento
+
         </a>
+
       </div>
 
-      <!-- Ferramentas de Matemática -->
+
+
+      <!-- MATEMÁTICA -->
+
       <div class="notebook-card">
-        <div class="card-title">Ferramentas de Matemática</div>
-        
-        <a href="https://pt.khanacademy.org" target="_blank" class="link-item">
-          <span style="font-size: 1.4rem;">🟢</span>
-          <div class="link-text">
-            <span class="link-title">Khan Academy</span>
-            <span class="link-url">Khan Academy ↗</span>
-          </div>
+
+        <div class="card-title">
+          Ferramentas de Matemática
+        </div>
+
+
+        <a
+          href="https://pt.khanacademy.org"
+          target="_blank"
+          class="link-item"
+        >
+
+          <span class="link-icon icon-green">
+            <i class="fa-solid fa-cube"></i>
+          </span>
+
+          <span class="link-text">
+
+            <span class="link-title">
+              Khan Academy
+            </span>
+
+            <span class="link-url">
+              Khan Academy ↗
+            </span>
+
+          </span>
+
         </a>
 
-        <a href="https://geogebra.org" target="_blank" class="link-item">
-          <span style="font-size: 1.4rem;">🟣</span>
-          <div class="link-text">
-            <span class="link-title">GeoGebra</span>
-            <span class="link-url">GeoGebra - Arq ↗</span>
-          </div>
+
+
+        <a
+          href="https://www.geogebra.org"
+          target="_blank"
+          class="link-item"
+        >
+
+          <span class="link-icon icon-purple">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </span>
+
+          <span class="link-text">
+
+            <span class="link-title">
+              GeoGebra
+            </span>
+
+            <span class="link-url">
+              GeoGebra - Arq ↗
+            </span>
+
+          </span>
+
         </a>
+
       </div>
 
-      <!-- Laboratório de Ciências -->
+
+
+      <!-- CIÊNCIAS -->
+
       <div class="notebook-card">
-        <div class="card-title">Laboratório de Ciências</div>
+
+        <div class="card-title">
+          Laboratório de Ciências
+        </div>
+
       </div>
 
-      <!-- Oficinas de Artes -->
+
+
+      <!-- ARTES -->
+
       <div class="notebook-card">
-        <div class="card-title">Oficinas de Artes</div>
-        <a href="https://canva.com" target="_blank" class="link-item">
-          <span style="font-size: 1.4rem;">🎨</span>
-          <div class="link-text">
-            <span class="link-title">Oficinas de Artes</span>
-            <span class="link-url">Oficinas de Artes ↗</span>
-          </div>
+
+        <div class="card-title">
+          Oficinas de Artes
+        </div>
+
+
+        <a
+          href="https://www.canva.com"
+          target="_blank"
+          class="link-item"
+        >
+
+          <span class="link-icon icon-orange">
+            <i class="fa-solid fa-scissors"></i>
+          </span>
+
+          <span class="link-text">
+
+            <span class="link-title">
+              Oficinas de Artes
+            </span>
+
+            <span class="link-url">
+              Oficinas de Artes ↗
+            </span>
+
+          </span>
+
         </a>
+
       </div>
 
-      <!-- Recursos de História -->
+
+
+      <!-- HISTÓRIA -->
+
       <div class="notebook-card">
-        <div class="card-title">Recursos de História</div>
-        <a href="https://artsandculture.google.com" target="_blank" class="link-item">
-          <span style="font-size: 1.4rem;">📖</span>
-          <div class="link-text">
-            <span class="link-title">História</span>
-            <span class="link-url">Recursos de história ↗</span>
-          </div>
+
+        <div class="card-title">
+          Recursos de História
+        </div>
+
+
+        <a
+          href="https://artsandculture.google.com"
+          target="_blank"
+          class="link-item"
+        >
+
+          <span class="link-icon icon-blue">
+            <i class="fa-regular fa-clock"></i>
+          </span>
+
+          <span class="link-text">
+
+            <span class="link-title">
+              História
+            </span>
+
+            <span class="link-url">
+              Recursos de história ↗
+            </span>
+
+          </span>
+
         </a>
+
       </div>
 
-      <!-- Atividades de Linguagem -->
+
+
+      <!-- LINGUAGEM -->
+
       <div class="notebook-card">
-        <div class="card-title">Atividades de Linguagem</div>
-        <a href="https://normaculta.com.br" target="_blank" class="link-item">
-          <span style="font-size: 1.4rem;">💬</span>
-          <div class="link-text">
-            <span class="link-title">Atividades de Linguagem</span>
-          </div>
+
+        <div class="card-title">
+          Atividades de Linguagem
+        </div>
+
+
+        <a
+          href="https://normaculta.com.br"
+          target="_blank"
+          class="link-item"
+        >
+
+          <span class="link-icon icon-blue">
+            <i class="fa-regular fa-comment"></i>
+          </span>
+
+          <span class="link-text">
+
+            <span class="link-title">
+              Atividades de Linguagem
+            </span>
+
+          </span>
+
         </a>
+
       </div>
 
-    </div>
 
-    <!-- Rodapé -->
+    </section>
+
+
+
+    <!-- ===================================================
+         RODAPÉ
+    =================================================== -->
+
     <footer>
+
+
       <div>
-        <h4>EEM. Ver. Oscar Manoel da Conceição</h4>
-        <p>Escola Jovem Sul da Ilha</p>
-        <p>Escola Jovem Sul da Ilha</p>
+
+        <h4>
+          EEM. Ver. Oscar Manoel da Conceição
+        </h4>
+
+        <p>
+          Escola Jovem Sul da Ilha
+        </p>
+
+        <p>
+          Escola de Educação Básica
+        </p>
+
       </div>
+
+
+
       <div>
-        <h4>Quick Links</h4>
-        <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a></p>
-        <p><a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
+
+        <h4>
+          Quick Links
+        </h4>
+
+        <p>
+          <a
+            href="https://pt.khanacademy.org"
+            target="_blank"
+          >
+            Khan Academy
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.geogebra.org"
+            target="_blank"
+          >
+            GeoGebra
+          </a>
+        </p>
+
       </div>
-      <div>
-        <h4>Contato</h4>
-        <p><a href="#sobre">Sobre</a></p>
-        <p><a href="#aluno">Área do Aluno</a></p>
+
+
+
+      <div id="contato">
+
+        <h4>
+          Contato
+        </h4>
+
+        <p>
+          <a href="#sobre">
+            Sobre
+          </a>
+        </p>
+
+        <p>
+          <a href="#aluno">
+            Área do Aluno
+          </a>
+        </p>
+
       </div>
+
+
     </footer>
 
   </div>
 
 </body>
+
 </html>
