@@ -14,202 +14,221 @@
     }
 
     body {
-      /* Imagem de fundo apontando para o repositório ou imagem remota */
-      background: #f5e8cf url('https://raw.githubusercontent.com/adrianomalek/cartilha-lca/main/Cartilha.jpg') no-repeat center top fixed;
+      /* Usa a imagem com a moldura e ilustrações como plano de fundo */
+      background: #f3e5c8 url('fundo.jpg') no-repeat center top fixed;
       background-size: cover;
       color: #2d3748;
       min-height: 100vh;
-      padding: 20px 10px 40px;
+      padding: 140px 20px 40px; /* Espaço no topo para não cobrir a coruja do fundo */
     }
 
     .container {
-      max-width: 1050px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
-    /* Cabeçalho da Escola com a Coruja */
-    .school-header {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .school-logo {
-      width: 110px;
-      height: 110px;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 50%;
-      padding: 5px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    /* Navegação */
+    /* Menu Superior Estilo Pílula */
     nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(253, 248, 237, 0.95);
       border-radius: 30px;
-      padding: 10px 25px;
+      padding: 10px 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 25px;
     }
 
     nav a {
       text-decoration: none;
-      color: #4a5568;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 6px 14px;
+      color: #2d3748;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 6px 16px;
       border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       transition: all 0.2s;
     }
 
     nav a.active, nav a:hover {
-      background-color: #fffaf0;
-      color: #c05621;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: #fcecd7;
+      color: #8c431f;
     }
 
-    /* Hero / Bem-vindos */
+    /* Card Hero / Boas-Vindas */
     .hero {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(253, 248, 237, 0.95);
       border-radius: 25px;
-      padding: 25px 20px;
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 35px;
     }
 
     .hero h1 {
       font-size: 1.8rem;
+      font-weight: 800;
       color: #1a202c;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .hero p {
-      color: #718096;
+      color: #4a5568;
       font-size: 0.98rem;
+      font-weight: 500;
     }
 
-    /* Grid de Cartões Estilo Caderno */
+    /* Grid de Cartões (3 colunas) */
     .grid-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-bottom: 35px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
     }
 
+    @media (max-width: 900px) {
+      .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Card Estilo Bloco de Notas / Caderno com Espiral */
     .notebook-card {
-      background: rgba(255, 255, 255, 0.97);
-      border-radius: 16px;
-      padding: 20px 20px 20px 35px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 20px 20px 20px 42px;
       position: relative;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      background-image: repeating-linear-gradient(white, white 27px, #e2e8f0 28px);
-      line-height: 1.5;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      background-image: repeating-linear-gradient(white, white 31px, #e2e8f0 32px);
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
-    /* Efeito de Espiral do Caderno */
+    /* Espiral do Bloco de Notas (Lado Esquerdo) */
     .notebook-card::before {
       content: '';
       position: absolute;
-      left: 10px;
+      left: 12px;
       top: 15px;
       bottom: 15px;
-      width: 10px;
+      width: 14px;
       background: repeating-linear-gradient(
         to bottom,
-        #a0aec0 0px,
-        #a0aec0 6px,
-        transparent 6px,
-        transparent 14px
+        #e2e8f0 0px,
+        #cbd5e0 4px,
+        #cbd5e0 8px,
+        transparent 8px,
+        transparent 18px
       );
-      border-radius: 4px;
+      border-radius: 10px;
+      box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     .card-title {
-      font-size: 1.15rem;
-      font-weight: 700;
+      font-size: 1.1rem;
+      font-weight: 800;
       color: #1a202c;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #cbd5e0;
-      padding-bottom: 4px;
-    }
-
-    .card-desc {
-      font-size: 0.88rem;
-      color: #4a5568;
       margin-bottom: 12px;
+      text-align: center;
+      line-height: 1.3;
     }
 
-    .link-list {
-      list-style: none;
-    }
-
-    .link-list li {
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-    }
-
-    .link-list a {
-      color: #2b6cb0;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .link-list a:hover {
-      text-decoration: underline;
-    }
-
-    /* Botão em Destaque */
+    /* Estilo dos Botões e Links Internos */
     .btn-agendamento {
       display: block;
-      background: #fff;
+      background: #ffffff;
       border: 2px solid #2d3748;
-      color: #2d3748;
+      color: #1a202c;
       text-align: center;
-      padding: 10px 15px;
+      padding: 10px 12px;
       border-radius: 12px;
       text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: auto;
       box-shadow: 0 3px 0 #2d3748;
-      transition: all 0.1s;
+      transition: transform 0.1s;
     }
 
     .btn-agendamento:active {
-      transform: translateY(3px);
-      box-shadow: 0 0 0 #2d3748;
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #2d3748;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: #1a202c;
+    }
+
+    .link-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .link-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-title {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #1a202c;
+    }
+
+    .link-url {
+      font-size: 0.8rem;
+      color: #2b6cb0;
+      text-decoration: underline;
+      font-weight: 600;
     }
 
     /* Rodapé */
     footer {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(253, 248, 237, 0.95);
       border-radius: 20px;
-      padding: 20px 30px;
+      padding: 20px 35px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #4a5568;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
     footer h4 {
       color: #1a202c;
-      margin-bottom: 5px;
+      font-weight: 800;
+      margin-bottom: 6px;
     }
 
     footer a {
-      color: #2b6cb0;
+      color: #1a202c;
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -217,17 +236,14 @@
 
   <div class="container">
 
-    <!-- Logo da Escola -->
-    <div class="school-header">
-      <img src="cartilha.png" alt="EEM. Ver. Oscar Manoel da Conceição" class="school-logo" onerror="this.style.display='none';">
-    </div>
-
     <!-- Menu Superior -->
     <nav>
       <a href="#" class="active">🏠 Início</a>
-      <a href="#bncc">ℹ️ Sobre</a>
-      <a href="#disciplinas">📚 Disciplinas</a>
-      <a href="#agendamento">📅 Agendamento</a>
+      <a href="#sobre">ℹ️ Sobre</a>
+      <a href="#cursos">📚 Cursos</a>
+      <a href="#galeria">🖼️ Galeria</a>
+      <a href="#contato">✉️ Contato</a>
+      <a href="#aluno">👤 Área do Aluno</a>
     </nav>
 
     <!-- Cabeçalho Principal / Hero -->
@@ -237,103 +253,80 @@
     </div>
 
     <!-- Grid de Cartões -->
-    <div class="grid-cards" id="disciplinas">
+    <div class="grid-cards">
 
       <!-- BNCC da Computação -->
-      <div class="notebook-card" id="bncc">
-        <div class="card-title">💻 BNCC da Computação</div>
-        <p class="card-desc">Integrando tecnologia e inovação em todas as áreas do conhecimento básico.</p>
-        <ul class="link-list">
-          <li>🧠 Pensamento Computacional</li>
-          <li>🌐 Mundo Digital</li>
-          <li>💡 Cultura Digital</li>
-        </ul>
+      <div class="notebook-card">
+        <div class="card-title">BNCC da Computação</div>
       </div>
 
       <!-- Agendamento de Aulas -->
-      <div class="notebook-card" id="agendamento">
-        <div class="card-title">📅 Agendamento de Aulas</div>
-        <p class="card-desc">Reserve seu horário no laboratório pelo sistema Agenda1 utilizando sua matrícula.</p>
-        <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendamento">🗓️ Agenda Digital - Faça seu Agendamento</a>
+      <div class="notebook-card">
+        <div class="card-title">Agendamento de Aulas</div>
+        <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendamento">
+          📋 Agenda Digital - Faça seu Agendamento
+        </a>
       </div>
 
-      <!-- Matemática -->
+      <!-- Ferramentas de Matemática -->
       <div class="notebook-card">
-        <div class="card-title">📊 Ferramentas de Matemática</div>
-        <p class="card-desc">Visualize funções, treine operações e torne o abstrato concreto.</p>
-        <ul class="link-list">
-          <li><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank">Acessar ↗</a></li>
-          <li><b>GeoGebra</b> — <a href="https://geogebra.org" target="_blank">Acessar ↗</a></li>
-          <li><b>PhET</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
-          <li><b>Matific</b> — <a href="https://matific.com" target="_blank">Acessar ↗</a></li>
-        </ul>
+        <div class="card-title">Ferramentas de Matemática</div>
+        
+        <a href="https://pt.khanacademy.org" target="_blank" class="link-item">
+          <span style="font-size: 1.4rem;">🟢</span>
+          <div class="link-text">
+            <span class="link-title">Khan Academy</span>
+            <span class="link-url">Khan Academy ↗</span>
+          </div>
+        </a>
+
+        <a href="https://geogebra.org" target="_blank" class="link-item">
+          <span style="font-size: 1.4rem;">🟣</span>
+          <div class="link-text">
+            <span class="link-title">GeoGebra</span>
+            <span class="link-url">GeoGebra - Arq ↗</span>
+          </div>
+        </a>
       </div>
 
-      <!-- Ciências -->
+      <!-- Laboratório de Ciências -->
       <div class="notebook-card">
-        <div class="card-title">🔬 Laboratório de Ciências</div>
-        <p class="card-desc">Explore fenômenos naturais e desperte a curiosidade científica.</p>
-        <ul class="link-list">
-          <li><b>PhET Simuladores</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
-          <li><b>BD Ciências</b> — <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar ↗</a></li>
-          <li><b>Khan Academy</b> — <a href="https://pt.khanacademy.org" target="_blank">Acessar ↗</a></li>
-          <li><b>EduCAPES</b> — <a href="https://educapes.capes.gov.br" target="_blank">Acessar ↗</a></li>
-        </ul>
+        <div class="card-title">Laboratório de Ciências</div>
       </div>
 
-      <!-- Português -->
+      <!-- Oficinas de Artes -->
       <div class="notebook-card">
-        <div class="card-title">📖 Atividades de Linguagem</div>
-        <p class="card-desc">Desenvolva leitura, escrita e interpretação de forma interativa.</p>
-        <ul class="link-list">
-          <li><b>Norma Culta</b> — <a href="https://normaculta.com.br" target="_blank">Acessar ↗</a></li>
-          <li><b>Domínio Público</b> — <a href="http://dominiopublico.gov.br" target="_blank">Acessar ↗</a></li>
-          <li><b>Canva</b> — <a href="https://canva.com" target="_blank">Acessar ↗</a></li>
-          <li><b>Wordwall</b> — <a href="https://wordwall.net" target="_blank">Acessar ↗</a></li>
-        </ul>
+        <div class="card-title">Oficinas de Artes</div>
+        <a href="https://canva.com" target="_blank" class="link-item">
+          <span style="font-size: 1.4rem;">🎨</span>
+          <div class="link-text">
+            <span class="link-title">Oficinas de Artes</span>
+            <span class="link-url">Oficinas de Artes ↗</span>
+          </div>
+        </a>
       </div>
 
-      <!-- História -->
+      <!-- Recursos de História -->
       <div class="notebook-card">
-        <div class="card-title">🏛️ Recursos de História</div>
-        <p class="card-desc">Conheça o passado e compreenda o presente.</p>
-        <ul class="link-list">
-          <li><b>Google Arts & Culture</b> — <a href="https://artsandculture.google.com" target="_blank">Acessar ↗</a></li>
-          <li><b>Museu da Pessoa</b> — <a href="https://museudapessoa.org" target="_blank">Acessar ↗</a></li>
-          <li><b>Brasiliana USP</b> — <a href="https://brasiliana.usp.br" target="_blank">Acessar ↗</a></li>
-        </ul>
+        <div class="card-title">Recursos de História</div>
+        <a href="https://artsandculture.google.com" target="_blank" class="link-item">
+          <span style="font-size: 1.4rem;">📖</span>
+          <div class="link-text">
+            <span class="link-title">História</span>
+            <span class="link-url">Recursos de história ↗</span>
+          </div>
+        </a>
       </div>
 
-      <!-- Geografia -->
+      <!-- Atividades de Linguagem -->
       <div class="notebook-card">
-        <div class="card-title">🌎 Recursos de Geografia</div>
-        <p class="card-desc">Explore o planeta e compreenda os espaços.</p>
-        <ul class="link-list">
-          <li><b>Google Earth</b> — <a href="https://earth.google.com" target="_blank">Acessar ↗</a></li>
-          <li><b>IBGE Educa</b> — <a href="https://ibge.gov.br" target="_blank">Acessar ↗</a></li>
-          <li><b>Climatempo</b> — <a href="https://climatempo.com.br" target="_blank">Acessar ↗</a></li>
-        </ul>
-      </div>
-
-      <!-- Inglês -->
-      <div class="notebook-card">
-        <div class="card-title">🇬🇧 Língua Inglesa</div>
-        <p class="card-desc">Aprenda inglês de forma interativa e divertida.</p>
-        <ul class="link-list">
-          <li><b>Duolingo</b> — <a href="https://duolingo.com" target="_blank">Acessar ↗</a></li>
-          <li><b>British Council</b> — <a href="https://learnenglish.britishcouncil.org" target="_blank">Acessar ↗</a></li>
-        </ul>
-      </div>
-
-      <!-- Artes -->
-      <div class="notebook-card">
-        <div class="card-title">🎨 Oficinas de Artes</div>
-        <p class="card-desc">Explore a criatividade e a expressão artística digital.</p>
-        <ul class="link-list">
-          <li><b>Google Arts & Culture</b> — <a href="https://artsandculture.google.com" target="_blank">Acessar ↗</a></li>
-          <li><b>Canva</b> — <a href="https://canva.com" target="_blank">Acessar ↗</a></li>
-          <li><b>Chrome Music Lab</b> — <a href="https://musiclab.chromeexperiments.com" target="_blank">Acessar ↗</a></li>
-        </ul>
+        <div class="card-title">Atividades de Linguagem</div>
+        <a href="https://normaculta.com.br" target="_blank" class="link-item">
+          <span style="font-size: 1.4rem;">💬</span>
+          <div class="link-text">
+            <span class="link-title">Atividades de Linguagem</span>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -343,14 +336,17 @@
       <div>
         <h4>EEM. Ver. Oscar Manoel da Conceição</h4>
         <p>Escola Jovem Sul da Ilha</p>
+        <p>Escola Jovem Sul da Ilha</p>
       </div>
       <div>
-        <h4>Links Rápidos</h4>
-        <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a> | <a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
+        <h4>Quick Links</h4>
+        <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a></p>
+        <p><a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
       </div>
       <div>
         <h4>Contato</h4>
-        <p>Laboratório de Computação Aplicada (LCA)</p>
+        <p><a href="#sobre">Sobre</a></p>
+        <p><a href="#aluno">Área do Aluno</a></p>
       </div>
     </footer>
 
