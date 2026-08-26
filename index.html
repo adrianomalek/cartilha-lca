@@ -36,7 +36,7 @@
     }
 
     .owl-icon {
-      font-size: 3.5rem; /* Coruja com tamanho aumentado */
+      font-size: 3.5rem;
       line-height: 1;
       display: inline-block;
       margin-bottom: 5px;
@@ -48,33 +48,10 @@
       color: var(--primary-color);
     }
 
-    /* Navigation */
-    nav {
-      background-color: var(--secondary-color);
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      padding: 12px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-
-    nav a:hover {
-      background-color: var(--primary-color);
-    }
-
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 40px 20px;
+      padding: 35px 20px;
       background: linear-gradient(135deg, #2b6cb0 0%, #319795 100%);
       color: white;
     }
@@ -84,11 +61,68 @@
       margin-bottom: 10px;
     }
 
-    /* Grid Layout */
-    .container {
+    /* Main Container */
+    .wrapper {
       max-width: 1200px;
       margin: 30px auto;
       padding: 0 20px;
+    }
+
+    /* BNCC Highlighted Section Top */
+    .bncc-highlight-box {
+      background: linear-gradient(135deg, #ffffff 0%, #edf2f7 100%);
+      border-left: 6px solid var(--primary-color);
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.05);
+    }
+
+    .bncc-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .bncc-summary {
+      font-size: 1.1rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .bncc-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 15px;
+    }
+
+    .pillar-item {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .pillar-item strong {
+      display: block;
+      color: var(--primary-color);
+      font-size: 1.05rem;
+      margin-bottom: 5px;
+    }
+
+    .pillar-item p {
+      font-size: 0.95rem;
+      color: #718096;
+    }
+
+    /* Grid Layout for other cards */
+    .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
@@ -176,7 +210,7 @@
 </head>
 <body>
 
-  <!-- Topo com a Coruja Ampliada e Nome da Escola -->
+  <!-- Topo com a Coruja e Nome da Escola -->
   <div class="header-mascot">
     <div class="owl-icon">🦉</div>
     <div class="school-title-header">
@@ -184,121 +218,128 @@
     </div>
   </div>
 
-  <!-- Menu de Navegação -->
-  <nav>
-    <a href="#">🏠 Início</a>
-    <a href="#sobre">ℹ️ Sobre</a>
-    <a href="#cursos">📚 Cursos</a>
-    <a href="#galeria">🖼️ Galeria</a>
-    <a href="#contato">✉️ Contato</a>
-    <a href="#aluno">👤 Área do Aluno</a>
-  </nav>
-
   <!-- Banner Principal -->
   <div class="hero">
     <h1>Bem-vindos ao Nosso Laboratório Criativo!</h1>
     <p>Explore, Crie, Aprenda. Um espaço dedicado à computação, inovação e educação.</p>
   </div>
 
-  <!-- Conteúdo em Cards -->
-  <div class="container">
+  <div class="wrapper">
 
-    <!-- Card BNCC -->
-    <div class="card">
-      <div class="card-title">BNCC da Computação</div>
-      <p>Desenvolvimento do pensamento computacional, cultura digital e mundo digital na educação básica.</p>
-      <ul>
-        <li>🧠 Pensamento Computacional</li>
-        <li>🌐 Mundo Digital</li>
-        <li>💡 Cultura Digital</li>
-      </ul>
+    <!-- BNCC da Computação no Topo com Resumo Atraente -->
+    <div class="bncc-highlight-box">
+      <div class="bncc-title">
+        💻 BNCC da Computação
+      </div>
+      <p class="bncc-summary">
+        A Computação na Educação Básica prepara os estudantes para compreender, transformar e criar no mundo conectado. Mais do que simplesmente utilizar tecnologia, a BNCC desenvolve o raciocínio crítico, a resolução de problemas complexos e a cidadania digital responsável através de 3 eixos fundamentais:
+      </p>
+      
+      <div class="bncc-pillars">
+        <div class="pillar-item">
+          <strong>🧠 Pensamento Computacional</strong>
+          <p>Habilidade de decompor problemas, identificar padrões, abstrair o essencial e criar algoritmos e rotinas de solução.</p>
+        </div>
+        <div class="pillar-item">
+          <strong>🌐 Mundo Digital</strong>
+          <p>Compreensão física e lógica dos computadores, redes de comunicação, internet e o funcionamento da informação no ecossistema digital.</p>
+        </div>
+        <div class="pillar-item">
+          <strong>💡 Cultura Digital</strong>
+          <p>Uso consciente, ético, crítico e seguro das tecnologias para aprender, colaborar e se expressar na sociedade.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Card Agendamento -->
-    <div class="card">
-      <div class="card-title">Agendamento de Aulas</div>
-      <a href="https://my.agenda1.app/home" target="_blank" class="btn-link">
-        📋 Agenda Digital - Faça seu Agendamento
-      </a>
-    </div>
+    <!-- Demais Recursos Didáticos -->
+    <div class="container">
 
-    <!-- Card Matemática -->
-    <div class="card">
-      <div class="card-title">Ferramentas de Matemática</div>
-      <ul>
-        <li>🟢 <a href="https://pt.khanacademy.org" target="_blank">Khan Academy ↗</a></li>
-        <li>🟣 <a href="https://geogebra.org" target="_blank">GeoGebra ↗</a></li>
-      </ul>
-    </div>
+      <!-- Card Agendamento -->
+      <div class="card">
+        <div class="card-title">Agendamento de Aulas</div>
+        <a href="https://my.agenda1.app/home" target="_blank" class="btn-link">
+          📋 Agenda Digital - Faça seu Agendamento
+        </a>
+      </div>
 
-    <!-- Card Ciências -->
-    <div class="card">
-      <div class="card-title">Laboratório de Ciências</div>
-      <p>Simulações virtuais e experimentos de biologia, física e química.</p>
-      <ul>
-        <li><b>PhET Simuladores:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
-        <li><b>BD Ciências:</b> <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar ↗</a></li>
-        <li><b>EduCAPES:</b> <a href="https://educapes.capes.gov.br" target="_blank">Acessar ↗</a></li>
-      </ul>
-    </div>
+      <!-- Card Matemática -->
+      <div class="card">
+        <div class="card-title">Ferramentas de Matemática</div>
+        <ul>
+          <li>🟢 <a href="https://pt.khanacademy.org" target="_blank">Khan Academy ↗</a></li>
+          <li>🟣 <a href="https://geogebra.org" target="_blank">GeoGebra ↗</a></li>
+        </ul>
+      </div>
 
-    <!-- Card Física -->
-    <div class="card">
-      <div class="card-title">Recursos de Física</div>
-      <p>Simulações interativas de mecânica, termodinâmica e eletromagnetismo.</p>
-      <a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank">⚡ PhET Física ↗</a>
-    </div>
+      <!-- Card Ciências -->
+      <div class="card">
+        <div class="card-title">Laboratório de Ciências</div>
+        <p>Simulações virtuais e experimentos de biologia, física e química.</p>
+        <ul>
+          <li><b>PhET Simuladores:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
+          <li><b>BD Ciências:</b> <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar ↗</a></li>
+          <li><b>EduCAPES:</b> <a href="https://educapes.capes.gov.br" target="_blank">Acessar ↗</a></li>
+        </ul>
+      </div>
 
-    <!-- Card Química -->
-    <div class="card">
-      <div class="card-title">Recursos de Química</div>
-      <p>Tabelas periódicas interativas e estrutura molecular.</p>
-      <a href="https://pt.khanacademy.org/science/chemistry" target="_blank">🧪 Khan Química ↗</a>
-    </div>
+      <!-- Card Física -->
+      <div class="card">
+        <div class="card-title">Recursos de Física</div>
+        <p>Simulações interativas de mecânica, termodinâmica e eletromagnetismo.</p>
+        <a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank">⚡ PhET Física ↗</a>
+      </div>
 
-    <!-- Card Geografia -->
-    <div class="card">
-      <div class="card-title">Geografia & Mapas</div>
-      <p>Mapeamento interativo, climatologia e geopolítica através de dados geográficos.</p>
-      <a href="https://earth.google.com/web/" target="_blank">🌍 Google Earth ↗</a>
-    </div>
+      <!-- Card Química -->
+      <div class="card">
+        <div class="card-title">Recursos de Química</div>
+        <p>Tabelas periódicas interativas e estrutura molecular.</p>
+        <a href="https://pt.khanacademy.org/science/chemistry" target="_blank">🧪 Khan Química ↗</a>
+      </div>
 
-    <!-- Card Educação Física -->
-    <div class="card">
-      <div class="card-title">Educação Física</div>
-      <p>Conteúdos sobre anatomia, saúde e movimento corporal.</p>
-      <a href="https://plataforma.saude.gov.br" target="_blank">⚽ Corpo & Movimento ↗</a>
-    </div>
+      <!-- Card Geografia -->
+      <div class="card">
+        <div class="card-title">Geografia & Mapas</div>
+        <p>Mapeamento interativo, climatologia e geopolítica através de dados geográficos.</p>
+        <a href="https://earth.google.com/web/" target="_blank">🌍 Google Earth ↗</a>
+      </div>
 
-    <!-- Card Inglês -->
-    <div class="card">
-      <div class="card-title">Língua Inglesa</div>
-      <p>Plataformas de aprendizado de idiomas e vocabulário.</p>
-      <a href="https://www.duolingo.com" target="_blank">🔤 Duolingo / ESL ↗</a>
-    </div>
+      <!-- Card Educação Física -->
+      <div class="card">
+        <div class="card-title">Educação Física</div>
+        <p>Conteúdos sobre anatomia, saúde e movimento corporal.</p>
+        <a href="https://plataforma.saude.gov.br" target="_blank">⚽ Corpo & Movimento ↗</a>
+      </div>
 
-    <!-- Card Artes -->
-    <div class="card">
-      <div class="card-title">Oficinas de Artes</div>
-      <p>Criação visual e design.</p>
-      <a href="https://canva.com" target="_blank">🎨 Canva ↗</a>
-    </div>
+      <!-- Card Inglês -->
+      <div class="card">
+        <div class="card-title">Língua Inglesa</div>
+        <p>Plataformas de aprendizado de idiomas e vocabulário.</p>
+        <a href="https://www.duolingo.com" target="_blank">🔤 Duolingo / ESL ↗</a>
+      </div>
 
-    <!-- Card História -->
-    <div class="card">
-      <div class="card-title">Recursos de História</div>
-      <a href="https://artsandculture.google.com" target="_blank">📖 Google Arts & Culture ↗</a>
-    </div>
+      <!-- Card Artes -->
+      <div class="card">
+        <div class="card-title">Oficinas de Artes</div>
+        <p>Criação visual e design.</p>
+        <a href="https://canva.com" target="_blank">🎨 Canva ↗</a>
+      </div>
 
-    <!-- Card Linguagem -->
-    <div class="card">
-      <div class="card-title">Atividades de Linguagem</div>
-      <a href="https://normaculta.com.br" target="_blank">💬 Norma Culta ↗</a>
-    </div>
+      <!-- Card História -->
+      <div class="card">
+        <div class="card-title">Recursos de História</div>
+        <a href="https://artsandculture.google.com" target="_blank">📖 Google Arts & Culture ↗</a>
+      </div>
 
+      <!-- Card Linguagem -->
+      <div class="card">
+        <div class="card-title">Atividades de Linguagem</div>
+        <a href="https://normaculta.com.br" target="_blank">💬 Norma Culta ↗</a>
+      </div>
+
+    </div>
   </div>
 
-  <!-- Rodapé com o nome completo por extenso -->
+  <!-- Rodapé com o nome completo da escola -->
   <footer>
     <div class="footer-content">
       <div>
@@ -309,11 +350,6 @@
         <h4>Links Rápidos</h4>
         <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a></p>
         <p><a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <p><a href="#sobre">Sobre</a></p>
-        <p><a href="#aluno">Área do Aluno</a></p>
       </div>
     </div>
   </footer>
