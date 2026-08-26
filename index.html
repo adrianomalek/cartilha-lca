@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartilha do Laboratório - EEM Ver. Oscar Manoel da Conceição</title>
-  
+  <title>Laboratório Criativo - Escola de Ensino Médio Vereador Oscar Manoel da Conceição</title>
   <style>
+    :root {
+      --primary-color: #2b6cb0;
+      --secondary-color: #1a202c;
+      --bg-color: #f7fafc;
+      --card-bg: #ffffff;
+      --text-color: #2d3748;
+      --accent-color: #319795;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,473 +22,291 @@
     }
 
     body {
-      background: #f5e8cf url('fundo.jpg') no-repeat center top fixed;
-      background-size: cover;
-      color: #2d3748;
-      min-height: 100vh;
-      padding: 30px 15px 40px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
+    /* Top Banner / Mascot Header */
+    .header-mascot {
+      background-color: #ebf8ff;
+      border-bottom: 2px solid #bee3f8;
+      text-align: center;
+      padding: 15px 20px;
     }
 
-    /* Selo / Logo Centralizado da Coruja (Tamanho Ampliado) */
-    .school-logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
+    .owl-icon {
+      font-size: 3.5rem; /* Coruja com tamanho aumentado */
+      line-height: 1;
+      display: inline-block;
+      margin-bottom: 5px;
     }
 
-    .school-seal {
-      width: 190px;
-      height: 190px;
-      background: rgba(253, 248, 237, 0.95);
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .school-title-header {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-color);
     }
 
-    /* Menu Superior Estilo Pílula */
+    /* Navigation */
     nav {
-      background: rgba(253, 248, 237, 0.95);
-      backdrop-filter: blur(5px);
-      border-radius: 30px;
-      padding: 10px 25px;
+      background-color: var(--secondary-color);
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 15px;
+      padding: 12px;
       flex-wrap: wrap;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 25px;
     }
 
     nav a {
+      color: #ffffff;
       text-decoration: none;
-      color: #2d3748;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 6px 14px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
     }
 
-    nav a.active, nav a:hover {
-      background-color: #fcecd7;
-      color: #8c431f;
+    nav a:hover {
+      background-color: var(--primary-color);
     }
 
-    /* Card Hero / Boas-Vindas */
+    /* Hero Section */
     .hero {
-      background: rgba(253, 248, 237, 0.95);
-      backdrop-filter: blur(5px);
-      border-radius: 25px;
-      padding: 25px 20px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 30px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #2b6cb0 0%, #319795 100%);
+      color: white;
     }
 
     .hero h1 {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: #1a202c;
-      margin-bottom: 8px;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    .hero p {
-      color: #4a5568;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    /* Grid de Cartões */
-    .grid-cards {
+    /* Grid Layout */
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      margin-bottom: 35px;
     }
 
-    @media (max-width: 900px) {
-      .grid-cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .grid-cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Card Estilo Bloco de Notas / Caderno com Espiral */
-    .notebook-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 20px 20px 20px 42px;
-      position: relative;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-      background-image: repeating-linear-gradient(white, white 31px, #e2e8f0 32px);
-      min-height: 180px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Espiral do Bloco de Notas (Lado Esquerdo) */
-    .notebook-card::before {
-      content: '';
-      position: absolute;
-      left: 12px;
-      top: 15px;
-      bottom: 15px;
-      width: 14px;
-      background: repeating-linear-gradient(
-        to bottom,
-        #e2e8f0 0px,
-        #cbd5e0 4px,
-        #cbd5e0 8px,
-        transparent 8px,
-        transparent 18px
-      );
-      border-radius: 10px;
-      box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
     }
 
     .card-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #1a202c;
-      margin-bottom: 10px;
-      text-align: center;
-      line-height: 1.3;
-    }
-
-    .card-desc {
-      font-size: 0.83rem;
-      color: #4a5568;
-      margin-bottom: 10px;
-      line-height: 1.4;
-    }
-
-    /* Botão em Destaque */
-    .btn-agendamento {
-      display: block;
-      background: #ffffff;
-      border: 2px solid #2d3748;
-      color: #1a202c;
-      text-align: center;
-      padding: 10px 12px;
-      border-radius: 12px;
-      text-decoration: none;
+      font-size: 1.2rem;
       font-weight: 700;
-      font-size: 0.85rem;
-      margin-top: auto;
-      box-shadow: 0 3px 0 #2d3748;
-      transition: transform 0.1s;
-    }
-
-    .btn-agendamento:active {
-      transform: translateY(2px);
-      box-shadow: 0 1px 0 #2d3748;
-    }
-
-    /* Links e Listas Internas */
-    .link-list {
-      list-style: none;
-    }
-
-    .link-list li {
-      margin-bottom: 6px;
-      font-size: 0.85rem;
-    }
-
-    .link-item {
+      color: var(--primary-color);
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .card ul {
+      list-style-type: none;
+      margin-top: 10px;
+    }
+
+    .card li {
+      margin-bottom: 8px;
+    }
+
+    .card a {
+      color: var(--primary-color);
       text-decoration: none;
-      color: #1a202c;
-    }
-
-    .link-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .link-title {
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: #1a202c;
-    }
-
-    .link-url {
-      font-size: 0.8rem;
-      color: #2b6cb0;
-      text-decoration: underline;
       font-weight: 600;
     }
 
-    /* Rodapé */
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white !important;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    /* Footer Adjustments */
     footer {
-      background: rgba(253, 248, 237, 0.95);
-      backdrop-filter: blur(5px);
-      border-radius: 20px;
-      padding: 20px 35px;
+      background-color: var(--secondary-color);
+      color: #ffffff;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
-      font-size: 0.85rem;
-      color: #4a5568;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
-    footer h4 {
-      color: #1a202c;
-      font-weight: 800;
-      margin-bottom: 6px;
+    .footer-school-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 5px;
     }
 
     footer a {
-      color: #1a202c;
+      color: #cbd5e0;
       text-decoration: none;
-      font-weight: 600;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
 
+  <!-- Topo com a Coruja Ampliada e Nome da Escola -->
+  <div class="header-mascot">
+    <div class="owl-icon">🦉</div>
+    <div class="school-title-header">
+      Escola de Ensino Médio Vereador Oscar Manoel da Conceição
+    </div>
+  </div>
+
+  <!-- Menu de Navegação -->
+  <nav>
+    <a href="#">🏠 Início</a>
+    <a href="#sobre">ℹ️ Sobre</a>
+    <a href="#cursos">📚 Cursos</a>
+    <a href="#galeria">🖼️ Galeria</a>
+    <a href="#contato">✉️ Contato</a>
+    <a href="#aluno">👤 Área do Aluno</a>
+  </nav>
+
+  <!-- Banner Principal -->
+  <div class="hero">
+    <h1>Bem-vindos ao Nosso Laboratório Criativo!</h1>
+    <p>Explore, Crie, Aprenda. Um espaço dedicado à computação, inovação e educação.</p>
+  </div>
+
+  <!-- Conteúdo em Cards -->
   <div class="container">
 
-    <!-- Logo da Escola (Coruja em Destaque Ampliado) -->
-    <div class="school-logo-container">
-      <div class="school-seal">
-        <svg viewBox="0 0 100 100" width="170" height="170">
-          <circle cx="50" cy="50" r="46" fill="none" stroke="#2d3748" stroke-width="2"/>
-          <circle cx="50" cy="50" r="42" fill="none" stroke="#2d3748" stroke-width="1" stroke-dasharray="3,2"/>
-          
-          <path d="M 35 38 L 40 46 L 60 46 L 65 38 L 62 55 C 62 65 38 65 38 55 Z" fill="none" stroke="#2d3748" stroke-width="2"/>
-          <circle cx="43" cy="48" r="4" fill="none" stroke="#2d3748" stroke-width="1.5"/>
-          <circle cx="43" cy="48" r="1.5" fill="#2d3748"/>
-          <circle cx="57" cy="48" r="4" fill="none" stroke="#2d3748" stroke-width="1.5"/>
-          <circle cx="57" cy="48" r="1.5" fill="#2d3748"/>
-          <polygon points="50,50 48,54 52,54" fill="#2d3748"/>
-          <path d="M 40 58 C 40 72 60 72 60 58" fill="none" stroke="#2d3748" stroke-width="2"/>
-          <path d="M 45 62 Q 50 66 55 62" fill="none" stroke="#2d3748" stroke-width="1"/>
-          
-          <path id="textPathTop" d="M 12 50 A 38 38 0 0 1 88 50" fill="none"/>
-          <text font-size="6.5" font-weight="bold" fill="#2d3748">
-            <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
-              E.E.M. Ver. Oscar Manoel da Conceição
-            </textPath>
-          </text>
-          
-          <path id="textPathBottom" d="M 88 50 A 38 38 0 0 1 12 50" fill="none"/>
-          <text font-size="6" font-weight="bold" fill="#2d3748">
-            <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">
-              Escola Jovem Sul da Ilha
-            </textPath>
-          </text>
-        </svg>
-      </div>
+    <!-- Card BNCC -->
+    <div class="card">
+      <div class="card-title">BNCC da Computação</div>
+      <p>Desenvolvimento do pensamento computacional, cultura digital e mundo digital na educação básica.</p>
+      <ul>
+        <li>🧠 Pensamento Computacional</li>
+        <li>🌐 Mundo Digital</li>
+        <li>💡 Cultura Digital</li>
+      </ul>
     </div>
 
-    <!-- Menu Superior -->
-    <nav>
-      <a href="#" class="active">🏠 Início</a>
-      <a href="#sobre">ℹ️ Sobre</a>
-      <a href="#cursos">📚 Cursos</a>
-      <a href="#galeria">🖼️ Galeria</a>
-      <a href="#contato">✉️ Contato</a>
-      <a href="#aluno">👤 Área do Aluno</a>
-    </nav>
-
-    <!-- Cabeçalho Principal / Hero -->
-    <div class="hero">
-      <h1>Bem-vindos ao Nosso Laboratório Criativo!</h1>
-      <p>Explore, Crie, Aprenda. Um espaço dedicado à computação, inovação e educação.</p>
+    <!-- Card Agendamento -->
+    <div class="card">
+      <div class="card-title">Agendamento de Aulas</div>
+      <a href="https://my.agenda1.app/home" target="_blank" class="btn-link">
+        📋 Agenda Digital - Faça seu Agendamento
+      </a>
     </div>
 
-    <!-- Grid de Cartões -->
-    <div class="grid-cards">
-
-      <!-- 1. BNCC da Computação -->
-      <div class="notebook-card">
-        <div class="card-title">BNCC da Computação</div>
-        <p class="card-desc">Desenvolvimento do pensamento computacional, cultura digital e mundo digital na educação básica.</p>
-        <ul class="link-list">
-          <li>🧠 Pensamento Computacional</li>
-          <li>🌐 Mundo Digital</li>
-          <li>💡 Cultura Digital</li>
-        </ul>
-      </div>
-
-      <!-- 2. Agendamento de Aulas -->
-      <div class="notebook-card">
-        <div class="card-title">Agendamento de Aulas</div>
-        <a href="https://my.agenda1.app/home" target="_blank" class="btn-agendamento">
-          📋 Agenda Digital - Faça seu Agendamento
-        </a>
-      </div>
-
-      <!-- 3. Ferramentas de Matemática -->
-      <div class="notebook-card">
-        <div class="card-title">Ferramentas de Matemática</div>
-        
-        <a href="https://pt.khanacademy.org" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">🟢</span>
-          <div class="link-text">
-            <span class="link-title">Khan Academy</span>
-            <span class="link-url">Khan Academy ↗</span>
-          </div>
-        </a>
-
-        <a href="https://geogebra.org" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">🟣</span>
-          <div class="link-text">
-            <span class="link-title">GeoGebra</span>
-            <span class="link-url">GeoGebra - Arq ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 4. Laboratório de Ciências -->
-      <div class="notebook-card">
-        <div class="card-title">Laboratório de Ciências</div>
-        <p class="card-desc">Simulações virtuais e experimentos de biologia, física e química para investigação científica.</p>
-        <ul class="link-list">
-          <li><b>PhET Simuladores</b> — <a href="https://phet.colorado.edu/pt_BR" target="_blank" style="color: #2b6cb0;">Acessar ↗</a></li>
-          <li><b>BD Ciências</b> — <a href="http://bdc.ib.unicamp.br" target="_blank" style="color: #2b6cb0;">Acessar ↗</a></li>
-          <li><b>EduCAPES</b> — <a href="https://educapes.capes.gov.br" target="_blank" style="color: #2b6cb0;">Acessar ↗</a></li>
-        </ul>
-      </div>
-
-      <!-- 5. Física -->
-      <div class="notebook-card">
-        <div class="card-title">Recursos de Física</div>
-        <p class="card-desc">Simulações interativas de mecânica, termodinâmica e eletromagnetismo.</p>
-        <a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">⚡</span>
-          <div class="link-text">
-            <span class="link-title">Simulações de Física</span>
-            <span class="link-url">PhET Física ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 6. Química -->
-      <div class="notebook-card">
-        <div class="card-title">Recursos de Química</div>
-        <p class="card-desc">Tabelas periódicas interativas, estrutura molecular e reações químicas virtuais.</p>
-        <a href="https://pt.khanacademy.org/science/chemistry" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">🧪</span>
-          <div class="link-text">
-            <span class="link-title">Química Interativa</span>
-            <span class="link-url">Khan Química ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 7. Geografia -->
-      <div class="notebook-card">
-        <div class="card-title">Geografia & Mapas</div>
-        <p class="card-desc">Mapeamento interativo, climatologia e geopolítica através de dados geográficos.</p>
-        <a href="https://earth.google.com/web/" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">🌍</span>
-          <div class="link-text">
-            <span class="link-title">Google Earth</span>
-            <span class="link-url">Navegar no Globo ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 8. Educação Física -->
-      <div class="notebook-card">
-        <div class="card-title">Educação Física</div>
-        <p class="card-desc">Conteúdos sobre anatomia, saúde, movimento corporal e modalidades esportivas.</p>
-        <a href="https://plataforma.saude.gov.br" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">⚽</span>
-          <div class="link-text">
-            <span class="link-title">Corpo & Movimento</span>
-            <span class="link-url">Recursos Didáticos ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 9. Língua Inglesa -->
-      <div class="notebook-card">
-        <div class="card-title">Língua Inglesa</div>
-        <p class="card-desc">Plataformas de aprendizado de idiomas, vocabulário e gramática interativa.</p>
-        <a href="https://www.duolingo.com" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">🔤</span>
-          <div class="link-text">
-            <span class="link-title">Prática de Inglês</span>
-            <span class="link-url">Duolingo / ESL ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 10. Oficinas de Artes -->
-      <div class="notebook-card">
-        <div class="card-title">Oficinas de Artes</div>
-        <a href="https://canva.com" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">🎨</span>
-          <div class="link-text">
-            <span class="link-title">Design e Criação</span>
-            <span class="link-url">Canva ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 11. Recursos de História -->
-      <div class="notebook-card">
-        <div class="card-title">Recursos de História</div>
-        <a href="https://artsandculture.google.com" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">📖</span>
-          <div class="link-text">
-            <span class="link-title">Acervo Histórico</span>
-            <span class="link-url">Google Arts & Culture ↗</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- 12. Atividades de Linguagem -->
-      <div class="notebook-card">
-        <div class="card-title">Atividades de Linguagem</div>
-        <a href="https://normaculta.com.br" target="_blank" class="link-item">
-          <span style="font-size: 1.3rem;">💬</span>
-          <div class="link-text">
-            <span class="link-title">Gramática e Escrita</span>
-            <span class="link-url">Norma Culta ↗</span>
-          </div>
-        </a>
-      </div>
-
+    <!-- Card Matemática -->
+    <div class="card">
+      <div class="card-title">Ferramentas de Matemática</div>
+      <ul>
+        <li>🟢 <a href="https://pt.khanacademy.org" target="_blank">Khan Academy ↗</a></li>
+        <li>🟣 <a href="https://geogebra.org" target="_blank">GeoGebra ↗</a></li>
+      </ul>
     </div>
 
-    <!-- Rodapé -->
-    <footer>
+    <!-- Card Ciências -->
+    <div class="card">
+      <div class="card-title">Laboratório de Ciências</div>
+      <p>Simulações virtuais e experimentos de biologia, física e química.</p>
+      <ul>
+        <li><b>PhET Simuladores:</b> <a href="https://phet.colorado.edu/pt_BR" target="_blank">Acessar ↗</a></li>
+        <li><b>BD Ciências:</b> <a href="http://bdc.ib.unicamp.br" target="_blank">Acessar ↗</a></li>
+        <li><b>EduCAPES:</b> <a href="https://educapes.capes.gov.br" target="_blank">Acessar ↗</a></li>
+      </ul>
+    </div>
+
+    <!-- Card Física -->
+    <div class="card">
+      <div class="card-title">Recursos de Física</div>
+      <p>Simulações interativas de mecânica, termodinâmica e eletromagnetismo.</p>
+      <a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank">⚡ PhET Física ↗</a>
+    </div>
+
+    <!-- Card Química -->
+    <div class="card">
+      <div class="card-title">Recursos de Química</div>
+      <p>Tabelas periódicas interativas e estrutura molecular.</p>
+      <a href="https://pt.khanacademy.org/science/chemistry" target="_blank">🧪 Khan Química ↗</a>
+    </div>
+
+    <!-- Card Geografia -->
+    <div class="card">
+      <div class="card-title">Geografia & Mapas</div>
+      <p>Mapeamento interativo, climatologia e geopolítica através de dados geográficos.</p>
+      <a href="https://earth.google.com/web/" target="_blank">🌍 Google Earth ↗</a>
+    </div>
+
+    <!-- Card Educação Física -->
+    <div class="card">
+      <div class="card-title">Educação Física</div>
+      <p>Conteúdos sobre anatomia, saúde e movimento corporal.</p>
+      <a href="https://plataforma.saude.gov.br" target="_blank">⚽ Corpo & Movimento ↗</a>
+    </div>
+
+    <!-- Card Inglês -->
+    <div class="card">
+      <div class="card-title">Língua Inglesa</div>
+      <p>Plataformas de aprendizado de idiomas e vocabulário.</p>
+      <a href="https://www.duolingo.com" target="_blank">🔤 Duolingo / ESL ↗</a>
+    </div>
+
+    <!-- Card Artes -->
+    <div class="card">
+      <div class="card-title">Oficinas de Artes</div>
+      <p>Criação visual e design.</p>
+      <a href="https://canva.com" target="_blank">🎨 Canva ↗</a>
+    </div>
+
+    <!-- Card História -->
+    <div class="card">
+      <div class="card-title">Recursos de História</div>
+      <a href="https://artsandculture.google.com" target="_blank">📖 Google Arts & Culture ↗</a>
+    </div>
+
+    <!-- Card Linguagem -->
+    <div class="card">
+      <div class="card-title">Atividades de Linguagem</div>
+      <a href="https://normaculta.com.br" target="_blank">💬 Norma Culta ↗</a>
+    </div>
+
+  </div>
+
+  <!-- Rodapé com o nome completo por extenso -->
+  <footer>
+    <div class="footer-content">
       <div>
-        <h4>EEM. Ver. Oscar Manoel da Conceição</h4>
-        <p>Escola Jovem Sul da Ilha</p>
+        <h4 class="footer-school-name">Escola de Ensino Médio Vereador Oscar Manoel da Conceição</h4>
+        <p style="color: #a0aec0;">Escola Jovem Sul da Ilha</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4>Links Rápidos</h4>
         <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a></p>
         <p><a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
       </div>
@@ -489,9 +315,8 @@
         <p><a href="#sobre">Sobre</a></p>
         <p><a href="#aluno">Área do Aluno</a></p>
       </div>
-    </footer>
-
-  </div>
+    </div>
+  </footer>
 
 </body>
 </html>
