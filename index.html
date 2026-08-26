@@ -6,12 +6,13 @@
   <title>Laboratório Criativo - Escola de Ensino Médio Vereador Oscar Manoel da Conceição</title>
   <style>
     :root {
-      --primary-color: #2b6cb0;
-      --secondary-color: #1a202c;
-      --bg-color: #f7fafc;
-      --card-bg: #ffffff;
-      --text-color: #2d3748;
-      --accent-color: #319795;
+      --bg-cream: #f4ede2;
+      --card-bg: #fcf9f2;
+      --text-dark: #2d241e;
+      --text-muted: #5c4d43;
+      --primary-brown: #3d2b1f;
+      --accent-soft: #ebdcc9;
+      --card-border: #e6d8c3;
     }
 
     * {
@@ -22,134 +23,164 @@
     }
 
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
       line-height: 1.6;
+      padding-bottom: 30px;
     }
 
-    /* Top Banner / Logo Container */
-    .header-logo-container {
-      background-color: #ffffff;
-      border-bottom: 2px solid #e2e8f0;
+    /* Header Logo */
+    .header-container {
       text-align: center;
-      padding: 20px 10px;
+      padding: 25px 10px 15px 10px;
     }
 
     .school-logo {
-      max-width: 180px; /* Tamanho ajustado da logo */
+      max-width: 140px;
       height: auto;
       display: inline-block;
+      mix-blend-mode: multiply;
     }
 
-    /* Hero Section */
+    /* Hero Banner estilo Card Mágico */
     .hero {
+      max-width: 1100px;
+      margin: 0 auto 30px auto;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 30px 20px;
       text-align: center;
-      padding: 35px 20px;
-      background: linear-gradient(135deg, #2b6cb0 0%, #319795 100%);
-      color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     }
 
     .hero h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
+      font-size: 2.1rem;
+      color: var(--primary-brown);
+      margin-bottom: 8px;
     }
 
-    /* Main Container */
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Container Principal */
     .wrapper {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 15px;
     }
 
-    /* BNCC Highlighted Section Top */
+    /* BNCC Highlight Box no topo estilo Caderno */
     .bncc-highlight-box {
-      background: linear-gradient(135deg, #ffffff 0%, #edf2f7 100%);
-      border-left: 6px solid var(--primary-color);
-      border-radius: 12px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 8px solid #d9a05b;
+      border-radius: 16px;
       padding: 25px 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.05);
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
     .bncc-title {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 800;
-      color: var(--primary-color);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      color: var(--primary-brown);
       margin-bottom: 12px;
     }
 
     .bncc-summary {
-      font-size: 1.1rem;
-      color: #4a5568;
+      font-size: 1.05rem;
+      color: var(--text-muted);
       margin-bottom: 20px;
-      line-height: 1.7;
     }
 
     .bncc-pillars {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
     }
 
     .pillar-item {
-      background: #ffffff;
+      background: #f7f0e6;
       padding: 15px;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      border-radius: 12px;
+      border: 1px dashed #d9c5b0;
     }
 
     .pillar-item strong {
       display: block;
-      color: var(--primary-color);
-      font-size: 1.05rem;
+      color: var(--primary-brown);
+      font-size: 1rem;
       margin-bottom: 5px;
     }
 
     .pillar-item p {
-      font-size: 0.95rem;
-      color: #718096;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
-    /* Grid Layout for other cards */
+    /* Grid de Cards estilo Bloco de Notas */
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: var(--card-bg);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      border: 1px solid #e2e8f0;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      position: relative;
+    }
+
+    /* Detalhe visual de espiral de caderno do lado esquerdo dos cards */
+    .card::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 15px;
+      bottom: 15px;
+      width: 14px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #a89584,
+        #a89584 6px,
+        transparent 6px,
+        transparent 14px
+      );
+      border-radius: 4px;
     }
 
     .card-title {
       font-size: 1.2rem;
       font-weight: 700;
-      color: var(--primary-color);
+      color: var(--primary-brown);
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      padding-left: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      padding-left: 10px;
     }
 
     .card ul {
       list-style-type: none;
-      margin-top: 10px;
+      margin-top: 8px;
+      padding-left: 10px;
     }
 
     .card li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .card a {
-      color: var(--primary-color);
+      color: #8c532b;
       text-decoration: none;
       font-weight: 600;
     }
@@ -160,23 +191,26 @@
 
     .btn-link {
       display: inline-block;
-      background-color: var(--primary-color);
-      color: white !important;
+      background-color: #8c532b;
+      color: #ffffff !important;
       padding: 8px 16px;
-      border-radius: 6px;
+      border-radius: 8px;
       margin-top: 10px;
+      margin-left: 10px;
+      text-decoration: none;
     }
 
-    /* Footer Adjustments */
+    /* Rodapé */
     footer {
-      background-color: var(--secondary-color);
-      color: #ffffff;
-      padding: 30px 20px;
+      background-color: #e2d5c3;
+      color: var(--text-dark);
+      padding: 25px 20px;
       margin-top: 40px;
+      border-radius: 16px 16px 0 0;
     }
 
     .footer-content {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -185,27 +219,27 @@
     }
 
     .footer-school-name {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 5px;
+      color: var(--primary-brown);
+      margin-bottom: 4px;
     }
 
     footer a {
-      color: #cbd5e0;
+      color: #8c532b;
       text-decoration: none;
     }
 
     footer a:hover {
-      color: #ffffff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <!-- Topo com a Logo da Escola -->
-  <div class="header-logo-container">
-    <img src="logo.jpg" alt="Logo Escola de Ensino Médio Vereador Oscar Manoel da Conceição" class="school-logo">
+  <!-- Topo com a Logo do Selo da Coruja -->
+  <div class="header-container">
+    <img src="logo.jpg" alt="Selo Coruja Escola de Ensino Médio Vereador Oscar Manoel da Conceição" class="school-logo">
   </div>
 
   <!-- Banner Principal -->
@@ -241,7 +275,7 @@
       </div>
     </div>
 
-    <!-- Demais Recursos Didáticos -->
+    <!-- Demais Recursos Didáticos estilo Bloco -->
     <div class="container">
 
       <!-- Card Agendamento -->
@@ -276,82 +310,82 @@
       <div class="card">
         <div class="card-title">Recursos de Física</div>
         <p>Simulações interativas de mecânica, termodinâmica e eletromagnetismo.</p>
-        <a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank">⚡ PhET Física ↗</a>
+        <p><a href="https://phet.colorado.edu/pt_BR/simulations/browse?category=physics" target="_blank">⚡ PhET Física ↗</a></p>
       </div>
 
       <!-- Card Química -->
       <div class="card">
         <div class="card-title">Recursos de Química</div>
         <p>Tabelas periódicas interativas e estrutura molecular.</p>
-        <a href="https://pt.khanacademy.org/science/chemistry" target="_blank">🧪 Khan Química ↗</a>
+        <p><a href="https://pt.khanacademy.org/science/chemistry" target="_blank">🧪 Khan Química ↗</a></p>
       </div>
 
       <!-- Card Geografia -->
       <div class="card">
         <div class="card-title">Geografia & Mapas</div>
         <p>Mapeamento interativo, climatologia e geopolítica através de dados geográficos.</p>
-        <a href="https://earth.google.com/web/" target="_blank">🌍 Google Earth ↗</a>
+        <p><a href="https://earth.google.com/web/" target="_blank">🌍 Google Earth ↗</a></p>
       </div>
 
       <!-- Card Filosofia -->
       <div class="card">
         <div class="card-title">Filosofia</div>
         <p>Textos clássicos, história do pensamento, ética e lógica para o desenvolvimento do senso crítico.</p>
-        <a href="http://www.dominiopublico.gov.br" target="_blank">🏛️ Acervo da Filosofia ↗</a>
+        <p><a href="http://www.dominiopublico.gov.br" target="_blank">🏛️ Acervo da Filosofia ↗</a></p>
       </div>
 
       <!-- Card Sociologia -->
       <div class="card">
         <div class="card-title">Sociologia</div>
         <p>Estudos sobre sociedade, cultura, cidadania, movimentos sociais e relações contemporâneas.</p>
-        <a href="https://mundoeducacao.uol.com.br/sociologia" target="_blank">🤝 Recursos de Sociologia ↗</a>
+        <p><a href="https://mundoeducacao.uol.com.br/sociologia" target="_blank">🤝 Recursos de Sociologia ↗</a></p>
       </div>
 
       <!-- Card Educação Física -->
       <div class="card">
         <div class="card-title">Educação Física</div>
         <p>Conteúdos sobre anatomia, saúde e movimento corporal.</p>
-        <a href="https://plataforma.saude.gov.br" target="_blank">⚽ Corpo & Movimento ↗</a>
+        <p><a href="https://plataforma.saude.gov.br" target="_blank">⚽ Corpo & Movimento ↗</a></p>
       </div>
 
       <!-- Card Inglês -->
       <div class="card">
         <div class="card-title">Língua Inglesa</div>
         <p>Plataformas de aprendizado de idiomas e vocabulário.</p>
-        <a href="https://www.duolingo.com" target="_blank">🔤 Duolingo / ESL ↗</a>
+        <p><a href="https://www.duolingo.com" target="_blank">🔤 Duolingo / ESL ↗</a></p>
       </div>
 
       <!-- Card Artes -->
       <div class="card">
         <div class="card-title">Oficinas de Artes</div>
         <p>Criação visual e design.</p>
-        <a href="https://canva.com" target="_blank">🎨 Canva ↗</a>
+        <p><a href="https://canva.com" target="_blank">🎨 Canva ↗</a></p>
       </div>
 
       <!-- Card História -->
       <div class="card">
         <div class="card-title">Recursos de História</div>
-        <a href="https://artsandculture.google.com" target="_blank">📖 Google Arts & Culture ↗</a>
+        <p><a href="https://artsandculture.google.com" target="_blank">📖 Google Arts & Culture ↗</a></p>
       </div>
 
       <!-- Card Linguagem -->
       <div class="card">
         <div class="card-title">Atividades de Linguagem</div>
-        <a href="https://normaculta.com.br" target="_blank">💬 Norma Culta ↗</a>
+        <p><a href="https://normaculta.com.br" target="_blank">💬 Norma Culta ↗</a></p>
       </div>
 
     </div>
   </div>
 
-  <!-- Rodapé com o nome completo da escola -->
+  <!-- Rodapé -->
   <footer>
     <div class="footer-content">
       <div>
         <h4 class="footer-school-name">Escola de Ensino Médio Vereador Oscar Manoel da Conceição</h4>
-        <p style="color: #a0aec0;">Escola Jovem Sul da Ilha</p>
+        <p style="color: #6b5a4e;">Escola Jovem Sul da Ilha</p>
       </div>
       <div>
-        <h4>Links Rápidos</h4>
+        <h4 style="color: var(--primary-brown);">Links Rápidos</h4>
         <p><a href="https://pt.khanacademy.org" target="_blank">Khan Academy</a></p>
         <p><a href="https://geogebra.org" target="_blank">GeoGebra</a></p>
       </div>
