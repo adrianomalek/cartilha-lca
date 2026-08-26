@@ -27,25 +27,18 @@
       line-height: 1.6;
     }
 
-    /* Top Banner / Mascot Header */
-    .header-mascot {
-      background-color: #ebf8ff;
-      border-bottom: 2px solid #bee3f8;
+    /* Top Banner / Logo Container */
+    .header-logo-container {
+      background-color: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
       text-align: center;
-      padding: 15px 20px;
+      padding: 20px 10px;
     }
 
-    .owl-icon {
-      font-size: 3.5rem;
-      line-height: 1;
+    .school-logo {
+      max-width: 180px; /* Tamanho ajustado da logo */
+      height: auto;
       display: inline-block;
-      margin-bottom: 5px;
-    }
-
-    .school-title-header {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary-color);
     }
 
     /* Hero Section */
@@ -210,12 +203,9 @@
 </head>
 <body>
 
-  <!-- Topo com a Coruja e Nome da Escola -->
-  <div class="header-mascot">
-    <div class="owl-icon">🦉</div>
-    <div class="school-title-header">
-      Escola de Ensino Médio Vereador Oscar Manoel da Conceição
-    </div>
+  <!-- Topo com a Logo da Escola -->
+  <div class="header-logo-container">
+    <img src="logo.jpg" alt="Logo Escola de Ensino Médio Vereador Oscar Manoel da Conceição" class="school-logo">
   </div>
 
   <!-- Banner Principal -->
@@ -226,7 +216,7 @@
 
   <div class="wrapper">
 
-    <!-- BNCC da Computação no Topo com Resumo Atraente -->
+    <!-- BNCC da Computação no Topo -->
     <div class="bncc-highlight-box">
       <div class="bncc-title">
         💻 BNCC da Computação
