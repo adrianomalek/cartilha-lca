@@ -6,13 +6,14 @@
   <title>Laboratório Criativo - Escola de Ensino Médio Vereador Oscar Manoel da Conceição</title>
   <style>
     :root {
-      --bg-cream: #f4ede2;
+      --bg-cream: #f5efe6;
       --card-bg: #fcf9f2;
       --text-dark: #2d241e;
       --text-muted: #5c4d43;
       --primary-brown: #3d2b1f;
-      --accent-soft: #ebdcc9;
+      --accent-gold: #d9a05b;
       --card-border: #e6d8c3;
+      --btn-brown: #8c532b;
     }
 
     * {
@@ -29,23 +30,28 @@
       padding-bottom: 30px;
     }
 
-    /* Header Logo */
+    /* Central Header com a Logo da Coruja em Destaque */
     .header-container {
       text-align: center;
-      padding: 25px 10px 15px 10px;
+      padding: 35px 15px 20px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     .school-logo {
-      max-width: 140px;
+      max-width: 180px;
       height: auto;
-      display: inline-block;
+      display: block;
+      margin: 0 auto;
       mix-blend-mode: multiply;
     }
 
-    /* Hero Banner estilo Card Mágico */
+    /* Hero Banner estilo Bloco de Notas */
     .hero {
       max-width: 1100px;
-      margin: 0 auto 30px auto;
+      margin: 10px auto 30px auto;
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 20px;
@@ -72,11 +78,11 @@
       padding: 0 15px;
     }
 
-    /* BNCC Highlight Box no topo estilo Caderno */
+    /* BNCC Highlight Box no topo */
     .bncc-highlight-box {
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-left: 8px solid #d9a05b;
+      border-left: 8px solid var(--accent-gold);
       border-radius: 16px;
       padding: 25px 30px;
       margin-bottom: 25px;
@@ -121,7 +127,7 @@
       color: var(--text-muted);
     }
 
-    /* Grid de Cards estilo Bloco de Notas */
+    /* Grid de Cards */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -137,7 +143,7 @@
       position: relative;
     }
 
-    /* Detalhe visual de espiral de caderno do lado esquerdo dos cards */
+    /* Detalhe de espiral de caderno do lado esquerdo */
     .card::before {
       content: '';
       position: absolute;
@@ -180,7 +186,7 @@
     }
 
     .card a {
-      color: #8c532b;
+      color: var(--btn-brown);
       text-decoration: none;
       font-weight: 600;
     }
@@ -191,7 +197,7 @@
 
     .btn-link {
       display: inline-block;
-      background-color: #8c532b;
+      background-color: var(--btn-brown);
       color: #ffffff !important;
       padding: 8px 16px;
       border-radius: 8px;
@@ -226,7 +232,7 @@
     }
 
     footer a {
-      color: #8c532b;
+      color: var(--btn-brown);
       text-decoration: none;
     }
 
@@ -237,9 +243,9 @@
 </head>
 <body>
 
-  <!-- Topo com a Logo do Selo da Coruja -->
+  <!-- Topo Centralizado com o Selo Oficial da Coruja -->
   <div class="header-container">
-   <img src="logo.png" alt="E.E.M. Ver. Oscar Manoel da Conceição - Escola Jovem do Sul da Ilha" class="school-logo">
+    <img src="logo.png" onerror="this.onerror=null; this.src='logo.jpg';" alt="Selo Coruja - E.E.M. Ver. Oscar Manoel da Conceição" class="school-logo">
   </div>
 
   <!-- Banner Principal -->
@@ -275,7 +281,7 @@
       </div>
     </div>
 
-    <!-- Demais Recursos Didáticos estilo Bloco -->
+    <!-- Cards dos Recursos Didáticos -->
     <div class="container">
 
       <!-- Card Agendamento -->
