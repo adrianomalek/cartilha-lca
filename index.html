@@ -7,7 +7,7 @@
   <style>
     :root {
       --bg-cream: #f5efe6;
-      --card-bg: rgba(252, 249, 242, 0.93);
+      --card-bg: rgba(252, 249, 242, 0.94);
       --text-dark: #2d241e;
       --text-muted: #5c4d43;
       --primary-brown: #3d2b1f;
@@ -24,13 +24,13 @@
     }
 
     body {
-      /* Imagem de fundo com a moldura escolar em PNG */
-      background-image: url('bg-cartilha.png');
+      background-color: var(--bg-cream);
+      /* Tenta carregar o fundo em PNG ou JPG */
+      background-image: url('bg-cartilha.png'), url('bg-cartilha.jpg'), url('Cartilha2.jpg');
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-color: var(--bg-cream);
       color: var(--text-dark);
       line-height: 1.6;
       padding-bottom: 30px;
